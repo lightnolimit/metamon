@@ -125,10 +125,10 @@ class OpponentMatcher:
     
     def get_opponent_display_name(self, opponent: OpponentInfo) -> str:
         """Get display name for opponent.
-        
+
         Args:
             opponent: OpponentInfo object
-        
+
         Returns:
             Display name for overlay (e.g., "Scout-1234" or "Human-Player123")
         """
@@ -136,5 +136,8 @@ class OpponentMatcher:
             return opponent.name
         else:
             # For bots, add a random suffix like the agent names
+            # Ensure total name length doesn't exceed 18 characters (Pokemon Showdown limit)
             suffix = ''.join(str(random.randint(0, 9)) for _ in range(4))
-            return f"{opponent.name}-Bot-{suffix}"
+            max_opponent_name_len = 18 - len("-") - len(suffix)  # Reserve space for dash and suffix
+            truncated_name = opponent.name[:max_opponent_name_len]
+            return f"{truncated_name}-{suffix}"
