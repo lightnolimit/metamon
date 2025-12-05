@@ -20,6 +20,18 @@ NC='\033[0m'
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
+# Find Python in conda metamon environment if available
+PYTHON_CMD="python3"
+if [ -d "/opt/homebrew/Caskroom/miniconda/base/envs/metamon/bin" ]; then
+    PYTHON_CMD="/opt/homebrew/Caskroom/miniconda/base/envs/metamon/bin/python3"
+fi
+
+# Check if metamon is installed
+if ! $PYTHON_CMD -c "import metamon" 2>/dev/null; then
+    echo -e "${RED}ERROR: Metamon not installed. Run: pip install -e .${NC}"
+    exit 1
+fi
+
 # Set cache directory
 if [ -z "$METAMON_CACHE_DIR" ]; then
     export METAMON_CACHE_DIR="$SCRIPT_DIR/.cache"
@@ -101,7 +113,7 @@ cleanup() {
 trap cleanup SIGINT SIGTERM
 
 # Run Mystery-Gift stream
-python3 << 'PYTHON_SCRIPT'
+$PYTHON_CMD << 'PYTHON_SCRIPT'
 import mystery_gift_config
 from metamon.streaming import start_mystery_gift_stream
 
