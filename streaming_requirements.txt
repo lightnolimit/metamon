@@ -1,0 +1,6 @@
+# Additional dependencies for 24/7 streaming
+playwright>=1.40.0
+
+# To install:
+# pip install -r streaming_requirements.txt
+# playwright install chromium

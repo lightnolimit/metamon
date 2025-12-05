@@ -132,7 +132,7 @@ python -m metamon.env
 Metamon provides large datasets of Pokémon team files, human battles, and other statistics that will automatically download when requested. Specify a path with:
 ```bash
 # add to ~/.bashrc
-export METAMON_CACHE_DIR=/path/to/plenty/of/disk/space
+export METAMON_CACHE_DIR=~/repos/metamon/.cache
 ```
 
 <br>

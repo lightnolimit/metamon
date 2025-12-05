@@ -424,6 +424,28 @@ class PokeEnvWrapper(OpenAIGymEnv):
                     with lz4.frame.open(temp_path, "wb") as f:
                         f.write(json.dumps(output_json).encode("utf-8"))
                     os.rename(temp_path, path)
+                    
+                    # STREAMING: Also save HTML replay for OBS viewing
+                    try:
+                        from metamon.streaming.replay_saver import (
+                            save_replay_html,
+                            extract_battle_log_from_battle,
+                        )
+                        battle_log = extract_battle_log_from_battle(self.current_battle)
+                        html_dir = os.path.join(
+                            self.save_trajectories_to, "html_replays"
+                        )
+                        save_replay_html(
+                            battle_log=battle_log,
+                            battle_id=battle_id,
+                            output_dir=html_dir,
+                            player_name=self.player_username,
+                            opponent_name=opponent_name,
+                            battle_format=self.metamon_battle_format,
+                        )
+                    except Exception as e:
+                        # Don't crash if HTML replay fails
+                        warnings.warn(f"Failed to save HTML replay: {e}")
 
                 if self.save_team_results_to is not None:
                     with open(self.save_team_results_to, "a") as f:
