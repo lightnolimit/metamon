@@ -28,6 +28,10 @@ def generate_replay_html(
     <meta charset="utf-8" />
     <title>{player_name} vs {opponent_name} - {battle_format.upper()}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Base URL so all assets load from Pokemon Showdown CDN -->
+    <base href="https://play.pokemonshowdown.com/" />
+    
     <style>
         body {{
             margin: 0;
