@@ -2,9 +2,12 @@
 
 import json
 import os
+import logging
 from typing import Dict, Optional
 from datetime import datetime
 from collections import deque
+
+logger = logging.getLogger(__name__)
 
 
 class TrainingMetrics:
