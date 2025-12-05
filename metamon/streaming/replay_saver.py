@@ -32,6 +32,10 @@ def generate_replay_html(
     <!-- Base URL so all assets load from Pokemon Showdown CDN -->
     <base href="https://play.pokemonshowdown.com/" />
     
+    <!-- Load Pokemon Showdown CSS for proper replay rendering -->
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/battle.css" />
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/replay.css" />
+    
     <style>
         body {{
             margin: 0;
@@ -39,13 +43,32 @@ def generate_replay_html(
             background: #000;
             font-family: Verdana, sans-serif;
         }}
+        /* Show the battle log by default */
         .battle-log {{
-            display: none;
+            display: block !important;
+        }}
+        /* Full screen layout for streaming */
+        .ps-room {{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }}
     </style>
 </head>
 <body>
+<!-- Container for Pokemon Showdown replay -->
+<div class="ps-room ps-room-opaque" data-battle>
+    <div class="battle">
+        <div class="battle-log" data-log></div>
+    </div>
+</div>
+
+<!-- Battle data -->
 <script type="text/plain" class="battle-log-data">{battle_log}</script>
+
+<!-- Pokemon Showdown replay embed script -->
 <script src="https://play.pokemonshowdown.com/js/replay-embed.js"></script>
 </body>
 </html>'''
