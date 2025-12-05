@@ -435,7 +435,7 @@ class PokeEnvWrapper(OpenAIGymEnv):
                         html_dir = os.path.join(
                             self.save_trajectories_to, "html_replays"
                         )
-                        save_replay_html(
+                        html_path = save_replay_html(
                             battle_log=battle_log,
                             battle_id=battle_id,
                             output_dir=html_dir,
@@ -443,9 +443,18 @@ class PokeEnvWrapper(OpenAIGymEnv):
                             opponent_name=opponent_name,
                             battle_format=self.metamon_battle_format,
                         )
+                        # Verify it worked
+                        if os.path.exists(html_path):
+                            size = os.path.getsize(html_path)
+                            if size > 1000:
+                                print(f"✓ Saved HTML replay ({size} bytes): {os.path.basename(html_path)}")
+                            else:
+                                print(f"⚠️  HTML replay too small ({size} bytes)")
                     except Exception as e:
-                        # Don't crash if HTML replay fails
-                        warnings.warn(f"Failed to save HTML replay: {e}")
+                        # Print error but don't crash
+                        print(f"⚠️  Failed to save HTML replay: {e}")
+                        import traceback
+                        traceback.print_exc()
 
                 if self.save_team_results_to is not None:
                     with open(self.save_team_results_to, "a") as f:
