@@ -101,6 +101,7 @@ class TournamentStreamOrchestrator:
             logger.warning("Non-baseline agents not fully supported yet, using baseline")
         
         # Create battle environment
+        # CRITICAL: Must set save_trajectories_to for HTML replay generation
         env = BattleAgainstBaseline(
             battle_format=self.config.battle_format,
             observation_space=agent1_info['observation_space'],
@@ -109,6 +110,7 @@ class TournamentStreamOrchestrator:
             team_set=team_set1,
             opponent_type=agent2_info['opponent_type'],
             battle_backend=self.config.battle_backend,
+            save_trajectories_to=str(self.output_dir),
         )
         
         # Override opponent team

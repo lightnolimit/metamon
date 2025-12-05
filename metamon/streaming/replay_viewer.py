@@ -97,34 +97,74 @@ class ReplayViewer:
         
         # Auto-click the play button
         try:
-            logger.info("Auto-clicking play button...")
-            # Try multiple selectors for the play button
+            logger.info("Searching for play button...")
+            
+            # Wait a bit more for replay to fully initialize
+            time.sleep(2)
+            
+            # Try multiple methods to click play
             play_clicked = self.page.evaluate("""
                 () => {
-                    // Try to find and click play button
-                    const playButton = document.querySelector('button.playbutton') ||
-                                     document.querySelector('button[name="play"]') ||
-                                     document.querySelector('.controls button:first-child') ||
-                                     document.querySelector('button[title="Play"]');
+                    // Method 1: Look for the main replay controls
+                    let playButton = document.querySelector('button.playbutton');
+                    
+                    // Method 2: Look for any button with play-related text
+                    if (!playButton) {
+                        const buttons = document.querySelectorAll('button');
+                        for (const btn of buttons) {
+                            if (btn.textContent.includes('Play') || 
+                                btn.title === 'Play' ||
+                                btn.name === 'play') {
+                                playButton = btn;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    // Method 3: Look in the replay controls area
+                    if (!playButton) {
+                        const controls = document.querySelector('.replay-controls, .battle-controls, .controls');
+                        if (controls) {
+                            playButton = controls.querySelector('button:first-child');
+                        }
+                    }
+                    
+                    // Method 4: Find by looking for play icon/symbol
+                    if (!playButton) {
+                        const buttons = document.querySelectorAll('button');
+                        for (const btn of buttons) {
+                            const html = btn.innerHTML;
+                            if (html.includes('▶') || html.includes('play')) {
+                                playButton = btn;
+                                break;
+                            }
+                        }
+                    }
                     
                     if (playButton) {
+                        console.log('Found play button:', playButton);
                         playButton.click();
                         return true;
                     }
                     
-                    // Sometimes it auto-plays, check if already playing
+                    console.log('No play button found');
                     return false;
                 }
             """)
             
             if play_clicked:
-                logger.info("✓ Play button clicked")
+                logger.info("✓ Play button clicked successfully")
             else:
-                logger.info("No play button found (may auto-play)")
+                logger.warning("⚠️  Could not find play button, checking page content...")
+                # Log page content for debugging
+                page_text = self.page.evaluate("() => document.body.innerText")
+                logger.info(f"Page text preview: {page_text[:200]}")
             
             time.sleep(1)
         except Exception as e:
-            logger.warning(f"Could not auto-click play: {e}")
+            logger.error(f"Failed to auto-click play: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
         
         # Wait for battle to complete by polling
         logger.info("Waiting for battle to complete...")
