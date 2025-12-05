@@ -1,41 +1,41 @@
 {
   "agent_name": "Mystery-Gift",
-  "total_battles": 201,
-  "wins": 25,
-  "losses": 176,
+  "total_battles": 240,
+  "wins": 30,
+  "losses": 210,
   "vs_humans_battles": 0,
   "vs_humans_wins": 0,
-  "vs_bots_battles": 201,
-  "vs_bots_wins": 25,
+  "vs_bots_battles": 240,
+  "vs_bots_wins": 30,
   "vs_bots": {
     "RandomBaseline": {
-      "battles": 54,
-      "wins": 22,
-      "losses": 32
+      "battles": 67,
+      "wins": 27,
+      "losses": 40
     },
     "Grunt": {
-      "battles": 50,
+      "battles": 59,
       "wins": 0,
-      "losses": 50
+      "losses": 59
     },
     "GymLeader": {
-      "battles": 50,
+      "battles": 59,
       "wins": 3,
-      "losses": 47
+      "losses": 56
     },
     "EmeraldKaizo": {
-      "battles": 47,
+      "battles": 55,
       "wins": 0,
-      "losses": 47
+      "losses": 55
     }
   },
-  "training_episodes": 201,
-  "total_reward": -16253.469209341025,
-  "average_reward": -80.8630308922439,
+  "training_episodes": 240,
+  "total_reward": -19258.986783039978,
+  "average_reward": -80.24577826266658,
   "current_streak": 0,
   "best_streak": 3,
-  "recent_wins": 12,
-  "recent_total": 78,
+  "recent_wins": 1,
+  "recent_total": 2,
   "started_at": "2025-12-04T23:06:29.464103",
-  "last_updated": "2025-12-05T00:40:04.579566"
+  "last_updated": "2025-12-05T01:42:55.137379"
 }

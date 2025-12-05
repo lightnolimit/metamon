@@ -112,12 +112,51 @@ cleanup() {
 
 trap cleanup SIGINT SIGTERM
 
-# Run Mystery-Gift stream
-$PYTHON_CMD << 'PYTHON_SCRIPT'
+# Parse command line arguments
+ENABLE_LADDER=false
+MAX_BATTLES=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --ladder)
+            ENABLE_LADDER=true
+            shift
+            ;;
+        --max-battles)
+            MAX_BATTLES="$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Usage: $0 [--ladder] [--max-battles N]"
+            exit 1
+            ;;
+    esac
+done
+
+echo "Configuration:"
+echo "  Ladder enabled: $ENABLE_LADDER"
+if [[ -n "$MAX_BATTLES" ]]; then
+    echo "  Max battles: $MAX_BATTLES"
+fi
+echo ""
+
+# Run Mystery-Gift stream with inline configuration
+$PYTHON_CMD << PYTHON_SCRIPT
 import mystery_gift_config
 from metamon.streaming import start_mystery_gift_stream
 
 config = mystery_gift_config.get_mystery_gift_config()
+
+# Override config with command line arguments if provided
+if '$ENABLE_LADDER' == 'true':
+    config['enable_ladder'] = True
+
+if '$MAX_BATTLES' != '':
+    try:
+        config['max_battles'] = int('$MAX_BATTLES')
+    except ValueError:
+        pass
 
 start_mystery_gift_stream(
     battle_format=config['battle_format'],

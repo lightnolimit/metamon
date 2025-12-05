@@ -30,7 +30,8 @@ def generate_replay_html(
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <!-- Base URL so all assets load from Pokemon Showdown CDN -->
-    <base href="https://play.pokemonshowdown.com/" />
+    <!-- Removed to fix CORS issues when viewing local files -->
+    <!-- <base href="https://play.pokemonshowdown.com/" />
     
     <!-- Load Pokemon Showdown CSS for proper replay rendering -->
     <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/battle.css" />

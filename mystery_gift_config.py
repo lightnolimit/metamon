@@ -28,7 +28,12 @@ OUTPUT_DIR = "./stream_data"
 # =============================================================================
 
 # Ladder settings
-ENABLE_LADDER = False  # Set to True to accept human opponents
+ENABLE_LADDER = True  # Set to True to accept human opponents
+# NOTE: For human opponents to connect:
+# 1. Local Pokemon Showdown server must be running (npm start in server/pokemon-showdown)
+# 2. User must connect to http://localhost:8000 (not public Pokemon Showdown)
+# 3. User must queue in Gen 1 OU format with a compatible team
+# 4. Agent will search for humans during 90-second wait periods
 HUMAN_WAIT_TIMEOUT = 60  # Seconds to wait for human before using bot
 
 # Bot opponents (rotates through these)

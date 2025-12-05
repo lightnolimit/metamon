@@ -2,21 +2,21 @@
 ║                     Mystery-Gift                     ║
 ╠══════════════════════════════════════════════════════╣
 ║                                                      ║
-║  Total Battles:   201                            ║
-║  Overall Win Rate:  12.4%                         ║
-║  Recent (100):  15.4%                              ║
+║  Total Battles:   240                            ║
+║  Overall Win Rate:  12.5%                         ║
+║  Recent (100):  50.0%                              ║
 ║                                                      ║
-║  Record:   25W -  176L                             ║
+║  Record:   30W -  210L                             ║
 ║  Current Streak:   0                             ║
 ║  Best Streak:   3                                ║
 ║                                                      ║
 ╠══════════════════════════════════════════════════════╣
 ║  VS HUMANS:     0 battles  |    0.0% win rate  ║
-║  VS BOTS:     201 battles  |   12.4% win rate  ║
+║  VS BOTS:     240 battles  |   12.5% win rate  ║
 ╠══════════════════════════════════════════════════════╣
 ║                                                      ║
 ║  Training Progress:                                  ║
-║    Episodes:   201                                ║
-║    Avg Reward:  -80.86                            ║
+║    Episodes:   240                                ║
+║    Avg Reward:  -80.25                            ║
 ║                                                      ║
 ╚══════════════════════════════════════════════════════╝

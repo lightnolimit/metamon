@@ -19,7 +19,9 @@
       "Bash(git push:*)",
       "Bash(lsof:*)",
       "Bash(grep:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(./RUN_MYSTERY_GIFT.sh:*)",
+      "Bash(bash -c 'ENABLE_LADDER=true MAX_BATTLES=5 ./RUN_MYSTERY_GIFT.sh 2>&1 | head -30')"
     ],
     "deny": [],
     "ask": []
