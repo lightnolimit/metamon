@@ -93,20 +93,43 @@ def extract_battle_log_from_battle(battle) -> str:
     """Extract battle log from poke-env Battle object.
     
     Args:
-        battle: poke_env Battle object
+        battle: poke_env Battle object (MetamonBackendBattle or similar)
     
     Returns:
-        Raw battle log string
+        Raw battle log string in Pokemon Showdown format
     """
-    # Try multiple methods to get battle log
-    if hasattr(battle, 'battle_tag') and hasattr(battle, 'logs'):
-        # Newer poke-env versions
-        return '\n'.join(battle.logs.get(battle.battle_tag, []))
+    battle_log_lines = []
+    
+    # Method 1: Check for _raw_battle_log (MetamonBackendBattle)
+    if hasattr(battle, '_raw_battle_log'):
+        battle_log_lines = battle._raw_battle_log
+    
+    # Method 2: Check for _received_messages (standard poke-env)
+    elif hasattr(battle, '_received_messages'):
+        for messages in battle._received_messages.values():
+            if isinstance(messages, list):
+                battle_log_lines.extend(messages)
+            else:
+                battle_log_lines.append(str(messages))
+    
+    # Method 3: Check battle_tag and logs dict
+    elif hasattr(battle, 'battle_tag') and hasattr(battle, 'logs'):
+        battle_log_lines = battle.logs.get(battle.battle_tag, [])
+    
+    # Method 4: Check _battle_log
     elif hasattr(battle, '_battle_log'):
-        # Older versions
-        return '\n'.join(battle._battle_log)
-    elif hasattr(battle, 'get_showdown_log'):
-        return battle.get_showdown_log()
-    else:
-        # Fallback: try to reconstruct from available data
-        return f"|player|p1|{battle.player_username}|\n|player|p2|{battle.opponent_username}|\n"
+        battle_log_lines = battle._battle_log
+    
+    # Join all lines into a single string
+    if battle_log_lines:
+        # Make sure each line starts with | if it doesn't already
+        formatted_lines = []
+        for line in battle_log_lines:
+            line_str = str(line)
+            if line_str and not line_str.startswith('|'):
+                line_str = '|' + line_str
+            formatted_lines.append(line_str)
+        return '\n'.join(formatted_lines)
+    
+    # Fallback: minimal log (this won't make a playable replay)
+    return f"|player|p1|{battle.player_username}|\n|player|p2|{battle.opponent_username}|\n|start\n"

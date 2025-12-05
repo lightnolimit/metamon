@@ -45,6 +45,9 @@ class MetamonBackendBattle(pe.AbstractBattle):
             gameid=battle_tag, time_played=datetime.now(), gen=gen
         )
         self._sim_protocol = mrp.forward.SimProtocol(self._mm_battle)
+        
+        # STREAMING: Store raw battle log for replay generation
+        self._raw_battle_log: List[str] = []
 
         # Turn choice attributes
         self.in_teampreview: bool = False
@@ -74,6 +77,11 @@ class MetamonBackendBattle(pe.AbstractBattle):
         Completely outsource all PS sim protocol messages to built-in
         Metamon replay parser.
         """
+        # STREAMING: Save raw message for replay generation
+        # Join the message back into showdown format
+        raw_message = '|'.join(split_message[1:])
+        self._raw_battle_log.append(raw_message)
+        
         self._sim_protocol.interpret_message(split_message[1:])
 
     def parse_request(self, request: Dict[str, Any]):
