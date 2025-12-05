@@ -135,6 +135,25 @@ if [ -z "$METAMON_CACHE_DIR" ]; then
     echo "  Using cache directory: $METAMON_CACHE_DIR"
 fi
 
+# Clean old replays for fresh start
+echo -e "${YELLOW}Cleaning old replays for fresh start...${NC}"
+if [ -d "stream_data/gen1ou/html_replays" ]; then
+    rm -f stream_data/gen1ou/html_replays/*.html
+    echo "  ✓ Removed old HTML replays"
+fi
+if [ -d "stream_data/gen2ou/html_replays" ]; then
+    rm -f stream_data/gen2ou/html_replays/*.html
+fi
+if [ -d "stream_data/gen3ou/html_replays" ]; then
+    rm -f stream_data/gen3ou/html_replays/*.html
+fi
+if [ -d "stream_data/gen4ou/html_replays" ]; then
+    rm -f stream_data/gen4ou/html_replays/*.html
+fi
+if [ -d "stream_data/gen9ou/html_replays" ]; then
+    rm -f stream_data/gen9ou/html_replays/*.html
+fi
+
 echo -e "${YELLOW}[4/4] Starting tournament stream...${NC}"
 echo ""
 echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"

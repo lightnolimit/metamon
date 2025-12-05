@@ -40,7 +40,6 @@ def generate_replay_html(
         body {{
             margin: 0;
             padding: 0;
-            background: #000;
             font-family: Verdana, sans-serif;
         }}
         /* Show the battle log by default */

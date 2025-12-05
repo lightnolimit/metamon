@@ -102,6 +102,10 @@ class TournamentStreamOrchestrator:
         
         # Create battle environment
         # CRITICAL: Must set save_trajectories_to for HTML replay generation
+        # Use agent names instead of random MM-XXXXX
+        import random
+        random_suffix = ''.join(str(random.randint(0, 9)) for _ in range(4))
+        
         env = BattleAgainstBaseline(
             battle_format=self.config.battle_format,
             observation_space=agent1_info['observation_space'],
@@ -111,6 +115,8 @@ class TournamentStreamOrchestrator:
             opponent_type=agent2_info['opponent_type'],
             battle_backend=self.config.battle_backend,
             save_trajectories_to=str(self.output_dir),
+            player_username=f"{agent1.name}-{random_suffix}",
+            opponent_username=f"{agent2.name}-{random_suffix}",
         )
         
         # Override opponent team
