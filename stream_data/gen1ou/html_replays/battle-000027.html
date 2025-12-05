@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Scout vs Ace - GEN1OU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Base URL so all assets load from Pokemon Showdown CDN -->
+    <base href="https://play.pokemonshowdown.com/" />
+    
+    <!-- Load Pokemon Showdown CSS for proper replay rendering -->
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/battle.css" />
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/replay.css" />
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+        }
+        /* Show the battle log by default */
+        .battle-log {
+            display: block !important;
+        }
+        /* Full screen layout for streaming */
+        .ps-room {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<!-- Container for Pokemon Showdown replay -->
+<div class="ps-room ps-room-opaque" data-battle>
+    <div class="battle">
+        <div class="battle-log" data-log></div>
+    </div>
+</div>
+
+<!-- Battle data -->
+<script type="text/plain" class="battle-log-data">|init|battle
+|title|Scout-5220 vs. Ace-5220
+|j|☆Scout-5220
+|j|☆Ace-5220
+|t:|1764897813
+|gametype|singles
+|player|p1|Scout-5220|2|
+|player|p2|Ace-5220|266|
+|gen|1
+|tier|[Gen 1] OU
+|rule|Desync Clause Mod: Desyncs changed to move failure.
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Freeze Clause Mod: Limit one foe frozen
+|rule|Species Clause: Limit one of each Pokémon
+|rule|OHKO Clause: OHKO moves are banned
+|rule|Evasion Moves Clause: Evasion moves are banned
+|rule|Endless Battle Clause: Forcing endless battles is banned
+|rule|HP Percentage Mod: HP is shown in percentages
+
+|t:|1764897813
+|teamsize|p1|6
+|teamsize|p2|6
+|start
+|switch|p1a: Alakazam|Alakazam|313/313
+|switch|p2a: Gengar|Gengar|100/100
+|turn|1
+|request|{"active":[{"moves":[{"move":"Psychic","id":"psychic","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"313/313","active":true,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":2}
+
+|t:|1764897814
+|move|p1a: Alakazam|Psychic|p2a: Gengar
+|-crit|p2a: Gengar
+|-supereffective|p2a: Gengar
+|-damage|p2a: Gengar|0 fnt
+|faint|p2a: Gengar
+|request|{"wait":true,"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"313/313","active":true,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":4}
+
+|t:|1764897814
+|switch|p2a: Snorlax|Snorlax|100/100
+|turn|2
+|request|{"active":[{"moves":[{"move":"Psychic","id":"psychic","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"313/313","active":true,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":6}
+
+|t:|1764897814
+|move|p1a: Alakazam|Psychic|p2a: Snorlax
+|-damage|p2a: Snorlax|70/100
+|-unboost|p2a: Snorlax|spa|1
+|-unboost|p2a: Snorlax|spd|1
+|move|p2a: Snorlax|Body Slam|p1a: Alakazam
+|-damage|p1a: Alakazam|136/313
+|-status|p1a: Alakazam|par
+
+|upkeep
+|turn|3
+|request|{"active":[{"moves":[{"move":"Psychic","id":"psychic","pp":14,"maxpp":16,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":true,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":8}
+
+|t:|1764897814
+|switch|p1a: Snorlax|Snorlax|523/523
+|move|p2a: Snorlax|Body Slam|p1a: Snorlax
+|-damage|p1a: Snorlax|389/523
+
+|upkeep
+|turn|4
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"389/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":10}
+
+|t:|1764897814
+|switch|p1a: Starmie|Starmie|323/323
+|move|p2a: Snorlax|Body Slam|p1a: Starmie
+|-damage|p1a: Starmie|196/323
+
+|upkeep
+|turn|5
+|request|{"active":[{"moves":[{"move":"Surf","id":"surf","pp":24,"maxpp":24,"target":"allAdjacentFoes","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"196/323","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"389/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":12}
+
+|t:|1764897814
+|move|p1a: Starmie|Surf|p2a: Snorlax
+|-damage|p2a: Snorlax|31/100
+|move|p2a: Snorlax|Body Slam|p1a: Starmie
+|-damage|p1a: Starmie|82/323
+
+|upkeep
+|turn|6
+|request|{"active":[{"moves":[{"move":"Surf","id":"surf","pp":23,"maxpp":24,"target":"allAdjacentFoes","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"82/323","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"389/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":14}
+
+|t:|1764897814
+|move|p1a: Starmie|Thunderbolt|p2a: Snorlax
+|-damage|p2a: Snorlax|4/100
+|move|p2a: Snorlax|Body Slam|p1a: Starmie
+|-damage|p1a: Starmie|0 fnt
+|faint|p1a: Starmie
+|request|{"forceSwitch":[true],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"389/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":16}
+
+|t:|1764897814
+|switch|p1a: Snorlax|Snorlax|389/523
+|turn|7
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"389/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":18}
+
+|t:|1764897814
+|move|p2a: Snorlax|Body Slam|p1a: Snorlax
+|-damage|p1a: Snorlax|240/523
+|move|p1a: Snorlax|Rest|p1a: Snorlax
+|-status|p1a: Snorlax|slp|[from] move: Rest
+|-heal|p1a: Snorlax|523/523 slp|[silent]
+
+|upkeep
+|turn|8
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523 slp","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"413/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":20}
+
+|t:|1764897814
+|switch|p1a: Rhydon|Rhydon|413/413
+|move|p2a: Snorlax|Body Slam|p1a: Rhydon
+|-resisted|p1a: Rhydon
+|-damage|p1a: Rhydon|366/413
+
+|upkeep
+|turn|9
+|request|{"active":[{"moves":[{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Substitute","id":"substitute","pp":16,"maxpp":16,"target":"self","disabled":false},{"move":"Rock Slide","id":"rockslide","pp":16,"maxpp":16,"target":"normal","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523 slp","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":22}
+
+|t:|1764897814
+|switch|p1a: Tauros|Tauros|353/353
+|move|p2a: Snorlax|Rest|p2a: Snorlax
+|-status|p2a: Snorlax|slp|[from] move: Rest
+|-heal|p2a: Snorlax|100/100 slp|[silent]
+
+|upkeep
+|turn|10
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523 slp","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":24}
+
+|t:|1764897814
+|switch|p1a: Snorlax|Snorlax|523/523 slp
+|cant|p2a: Snorlax|slp
+
+|upkeep
+|turn|11
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523 slp","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":26}
+
+|t:|1764897814
+|cant|p1a: Snorlax|slp
+|-curestatus|p2a: Snorlax|slp|[msg]
+
+|upkeep
+|turn|12
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523 slp","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":28}
+
+|t:|1764897814
+|move|p2a: Snorlax|Body Slam|p1a: Snorlax
+|-damage|p1a: Snorlax|390/523 slp
+|-curestatus|p1a: Snorlax|slp|[msg]
+
+|upkeep
+|turn|13
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"390/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":30}
+
+|t:|1764897814
+|move|p2a: Snorlax|Body Slam|p1a: Snorlax
+|-damage|p1a: Snorlax|253/523
+|move|p1a: Snorlax|Reflect|p1a: Snorlax
+|-start|p1a: Snorlax|Reflect
+
+|upkeep
+|turn|14
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":31,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":32}
+
+|t:|1764897814
+|switch|p1a: Tauros|Tauros|353/353
+|move|p2a: Snorlax|Body Slam|p1a: Tauros
+|-damage|p1a: Tauros|240/353
+
+|upkeep
+|turn|15
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"240/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":34}
+
+|t:|1764897814
+|move|p1a: Tauros|Hyper Beam|p2a: Snorlax
+|-damage|p2a: Snorlax|58/100
+|-mustrecharge|p1a: Tauros
+|move|p2a: Snorlax|Body Slam|p1a: Tauros
+|-crit|p1a: Tauros
+|-damage|p1a: Tauros|21/353
+
+|upkeep
+|turn|16
+|request|{"active":[{"moves":[{"move":"Recharge","id":"recharge"}],"trapped":true}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"21/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":36}
+
+|t:|1764897814
+|cant|p1a: Tauros|recharge
+|move|p2a: Snorlax|Body Slam|p1a: Tauros
+|-damage|p1a: Tauros|0 fnt
+|faint|p1a: Tauros
+|request|{"forceSwitch":[true],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":38}
+
+|t:|1764897814
+|switch|p1a: Chansey|Chansey|703/703
+|turn|17
+|request|{"active":[{"moves":[{"move":"Sing","id":"sing","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":40}
+
+|t:|1764897814
+|move|p1a: Chansey|Ice Beam|p2a: Snorlax
+|-damage|p2a: Snorlax|27/100
+|move|p2a: Snorlax|Body Slam|p1a: Chansey
+|-damage|p1a: Chansey|414/703
+
+|upkeep
+|turn|18
+|request|{"active":[{"moves":[{"move":"Sing","id":"sing","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":42}
+
+|t:|1764897814
+|move|p1a: Chansey|Ice Beam|p2a: Snorlax
+|-damage|p2a: Snorlax|0 fnt
+|faint|p2a: Snorlax
+|request|{"wait":true,"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":44}
+
+|t:|1764897814
+|switch|p2a: Tauros|Tauros|100/100
+|turn|19
+|request|{"active":[{"moves":[{"move":"Sing","id":"sing","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":14,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"253/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":46}
+
+|t:|1764897814
+|switch|p1a: Snorlax|Snorlax|253/523
+|move|p2a: Tauros|Body Slam|p1a: Snorlax
+|-damage|p1a: Snorlax|130/523
+
+|upkeep
+|turn|20
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":31,"maxpp":32,"target":"self","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Rest","id":"rest","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"130/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":48}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Snorlax
+|-damage|p1a: Snorlax|0 fnt
+|faint|p1a: Snorlax
+|request|{"forceSwitch":[true],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":50}
+
+|t:|1764897814
+|switch|p1a: Rhydon|Rhydon|366/413
+|turn|21
+|request|{"active":[{"moves":[{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Substitute","id":"substitute","pp":16,"maxpp":16,"target":"self","disabled":false},{"move":"Rock Slide","id":"rockslide","pp":16,"maxpp":16,"target":"normal","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":52}
+
+|t:|1764897814
+|move|p2a: Tauros|Blizzard|p1a: Rhydon|[miss]
+|-miss|p2a: Tauros
+|move|p1a: Rhydon|Rock Slide|p2a: Tauros
+|-damage|p2a: Tauros|72/100
+
+|upkeep
+|turn|22
+|request|{"active":[{"moves":[{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Substitute","id":"substitute","pp":16,"maxpp":16,"target":"self","disabled":false},{"move":"Rock Slide","id":"rockslide","pp":15,"maxpp":16,"target":"normal","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"366/413","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":54}
+
+|t:|1764897814
+|move|p2a: Tauros|Blizzard|p1a: Rhydon
+|-supereffective|p1a: Rhydon
+|-damage|p1a: Rhydon|126/413
+|move|p1a: Rhydon|Substitute|p1a: Rhydon
+|-start|p1a: Rhydon|Substitute
+|-damage|p1a: Rhydon|23/413
+
+|upkeep
+|turn|23
+|request|{"active":[{"moves":[{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Substitute","id":"substitute","pp":15,"maxpp":16,"target":"self","disabled":false},{"move":"Rock Slide","id":"rockslide","pp":15,"maxpp":16,"target":"normal","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"23/413","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":56}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Rhydon
+|-crit|p1a: Rhydon
+|-resisted|p1a: Rhydon
+|-activate|p1a: Rhydon|Substitute|[damage]
+|move|p1a: Rhydon|Body Slam|p2a: Tauros
+|-damage|p2a: Tauros|47/100
+
+|upkeep
+|turn|24
+|request|{"active":[{"moves":[{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Body Slam","id":"bodyslam","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Substitute","id":"substitute","pp":15,"maxpp":16,"target":"self","disabled":false},{"move":"Rock Slide","id":"rockslide","pp":15,"maxpp":16,"target":"normal","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"23/413","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":58}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Rhydon
+|-resisted|p1a: Rhydon
+|-end|p1a: Rhydon|Substitute
+|move|p1a: Rhydon|Earthquake|p2a: Tauros
+|-damage|p2a: Tauros|2/100
+
+|upkeep
+|turn|25
+|request|{"active":[{"moves":[{"move":"Earthquake","id":"earthquake","pp":15,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Body Slam","id":"bodyslam","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Substitute","id":"substitute","pp":15,"maxpp":16,"target":"self","disabled":false},{"move":"Rock Slide","id":"rockslide","pp":15,"maxpp":16,"target":"normal","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"23/413","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":60}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Rhydon
+|-resisted|p1a: Rhydon
+|-damage|p1a: Rhydon|0 fnt
+|faint|p1a: Rhydon
+|request|{"forceSwitch":[true],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Rhydon","details":"Rhydon","condition":"0 fnt","active":true,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":62}
+
+|t:|1764897814
+|switch|p1a: Alakazam|Alakazam|136/313 par
+|turn|26
+|request|{"active":[{"moves":[{"move":"Psychic","id":"psychic","pp":14,"maxpp":16,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"136/313 par","active":true,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"0 fnt","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":64}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Alakazam
+|-damage|p1a: Alakazam|0 fnt
+|faint|p1a: Alakazam
+|request|{"forceSwitch":[true],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":true,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"0 fnt","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":66}
+
+|t:|1764897814
+|switch|p1a: Chansey|Chansey|414/703
+|turn|27
+|request|{"active":[{"moves":[{"move":"Sing","id":"sing","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":14,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"414/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"0 fnt","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":68}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Chansey
+|-damage|p1a: Chansey|138/703
+|move|p1a: Chansey|Soft-Boiled|p1a: Chansey
+|-heal|p1a: Chansey|489/703
+
+|upkeep
+|turn|28
+|request|{"active":[{"moves":[{"move":"Sing","id":"sing","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":14,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"489/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"0 fnt","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":70}
+
+|t:|1764897814
+|move|p2a: Tauros|Body Slam|p1a: Chansey
+|-damage|p1a: Chansey|197/703
+|move|p1a: Chansey|Thunder Wave|p2a: Tauros
+|-status|p2a: Tauros|par
+
+|upkeep
+|turn|29
+|request|{"active":[{"moves":[{"move":"Sing","id":"sing","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":14,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":15,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Scout-5220","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"197/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["sing","icebeam","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["surf","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":198,"def":188,"spa":368,"spd":368,"spe":338},"moves":["psychic","seismictoss","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Rhydon","details":"Rhydon","condition":"0 fnt","active":false,"stats":{"atk":358,"def":338,"spa":188,"spd":188,"spe":178},"moves":["earthquake","bodyslam","substitute","rockslide"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","icebeam","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":72}
+
+|t:|1764897814
+|move|p1a: Chansey|Sing|p2a: Tauros|[miss]
+|-miss|p1a: Chansey
+|move|p2a: Tauros|Body Slam|p1a: Chansey
+|-damage|p1a: Chansey|0 fnt
+|faint|p1a: Chansey
+
+|win|Ace-5220
+|deinit</script>
+
+<!-- Pokemon Showdown replay embed script -->
+<script src="https://play.pokemonshowdown.com/js/replay-embed.js"></script>
+</body>
+</html>
