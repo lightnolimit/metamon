@@ -8,6 +8,10 @@ from .stats_tracker import StatsTracker, TournamentStatsTracker
 from .replay_viewer import ReplayViewer
 from .tournament_manager import TournamentManager, TournamentConfig, TournamentAgent
 from .training_stream import start_tournament_stream
+from .mystery_gift_agent import MysteryGiftAgent
+from .opponent_matcher import OpponentMatcher, OpponentInfo
+from .training_tracker import TrainingMetrics
+from .mystery_gift_stream import start_mystery_gift_stream
 
 __all__ = [
     'generate_replay_html',
@@ -19,4 +23,9 @@ __all__ = [
     'TournamentConfig',
     'TournamentAgent',
     'start_tournament_stream',
+    'MysteryGiftAgent',
+    'OpponentMatcher',
+    'OpponentInfo',
+    'TrainingMetrics',
+    'start_mystery_gift_stream',
 ]
