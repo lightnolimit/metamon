@@ -13,6 +13,7 @@ from metamon.streaming.opponent_matcher import OpponentMatcher, OpponentInfo
 from metamon.streaming.training_tracker import TrainingMetrics
 from metamon.streaming.replay_viewer import ReplayViewer
 from metamon.streaming.obs_overlay import OBSOverlay
+from metamon.streaming.obs_widgets import OBSWidgetManager
 
 logger = logging.getLogger(__name__)
 
@@ -50,6 +51,7 @@ class MysteryGiftStreamOrchestrator:
         
         # Opponent matcher
         self.opponent_matcher = OpponentMatcher(
+            agent=agent,
             human_wait_timeout=human_wait_timeout
         )
         
@@ -71,6 +73,9 @@ class MysteryGiftStreamOrchestrator:
 
         # OBS overlay
         self.obs_overlay = OBSOverlay(self.stats_dir)
+
+        # OBS widgets (separate text files for flexible positioning)
+        self.obs_widgets = OBSWidgetManager(str(self.stats_dir))
 
         self.enable_ladder = enable_ladder
         self.running = False
@@ -102,6 +107,10 @@ class MysteryGiftStreamOrchestrator:
             "current_battle_status": battle_status,
             "agent_name": agent_username
         })
+
+        # Update OBS widgets with current opponent
+        self.obs_widgets.update_current_opponent(opponent_display, opponent.opponent_type)
+        self.obs_widgets.update_search_status("In battle")
 
         # Save current opponent status
         self._save_current_status(opponent, opponent_display)
@@ -152,7 +161,7 @@ class MysteryGiftStreamOrchestrator:
             opponent_name=opponent.name,
             reward=total_reward,
         )
-        
+
         # Save overlay
         self.training_metrics.save_stream_overlay(
             str(self.stats_dir / "mystery_gift_overlay.txt")
@@ -164,6 +173,9 @@ class MysteryGiftStreamOrchestrator:
             "current_battle_status": battle_status,
             "agent_name": agent_username
         })
+
+        # Update OBS widgets with current stats
+        self.obs_widgets.update_all_widgets(self.training_metrics.metrics)
 
         # Cleanup
         try:
@@ -273,34 +285,64 @@ class MysteryGiftStreamOrchestrator:
         time.sleep(3)
 
     def _wait_between_battles(self):
-        """Wait 30 seconds between battles with opponent search."""
-        logger.info("Waiting 30 seconds before next battle...")
+        """Wait 90 seconds between battles with opponent search."""
+        logger.info("Waiting 90 seconds before next battle...")
 
-        # Update OBS overlay with waiting status
+        # Update OBS overlay and widgets with waiting status
         self.obs_overlay.update_stats({
             "current_battle_status": "Waiting for next battle...",
             "agent_name": self.agent.base_name
         })
 
-        # Split wait into 5-second intervals to check for stop signal
-        for i in range(6):  # 6 * 5 = 30 seconds
+        self.obs_widgets.update_search_status("Waiting for next battle...")
+        self.obs_widgets.update_current_opponent("", "bot")  # Clear current opponent
+
+        # Split wait into 3-second intervals for responsive checking
+        total_wait = 90
+        for i in range(total_wait // 3):  # 30 intervals of 3 seconds
             if not self.running:
                 break
 
-            remaining = 30 - (i * 5)
+            remaining = total_wait - (i * 3)
+
+            # Update countdown widgets
+            self.obs_widgets.update_countdown(remaining)
+
+            # Update OBS overlay with countdown
             if remaining > 0:
-                # Update OBS overlay with countdown
+                minutes = remaining // 60
+                seconds = remaining % 60
+                if minutes > 0:
+                    countdown_display = f"Waiting for next battle... ({minutes}:{seconds:02d} remaining)"
+                else:
+                    countdown_display = f"Waiting for next battle... ({seconds}s remaining)"
+
                 self.obs_overlay.update_stats({
-                    "current_battle_status": f"Waiting for next battle... ({remaining}s remaining)",
+                    "current_battle_status": countdown_display,
                     "agent_name": self.agent.base_name
                 })
 
-            time.sleep(5)
+            # Search for human opponents during wait
+            if self.enable_ladder and i == 0:  # Start search at beginning
+                logger.info("Starting continuous human search...")
+                self.obs_widgets.update_search_status("Searching for human opponents...")
+                self.opponent_matcher.start_continuous_search(duration=90)
+            elif self.enable_ladder and i % 10 == 0:  # Update status periodically
+                if self.opponent_matcher.search_active:
+                    self.obs_widgets.update_search_status("Human search active...")
+                else:
+                    self.obs_widgets.update_search_status("Human search stopped")
 
-            # Only search for human opponents during wait
-            if self.enable_ladder and i == 2:  # Check once at 15 seconds
-                logger.info("Checking for human opponents...")
-                # Could add human opponent check here if needed
+            time.sleep(3)
+
+        # Clear countdown when done
+        self.obs_widgets.update_countdown(0)
+
+        # Stop continuous human search
+        if self.opponent_matcher.search_active:
+            self.opponent_matcher.stop_continuous_search()
+
+        self.obs_widgets.update_search_status("Ready for battle!")
     
     def run_training_stream(self, max_battles: Optional[int] = None):
         """Run the training stream.
@@ -330,6 +372,14 @@ class MysteryGiftStreamOrchestrator:
         logger.info(f"  URL: file://{overlay_path.absolute()}")
         logger.info(f"  Width: 450, Height: Auto")
 
+        # Initialize OBS widgets with current stats
+        self.obs_widgets.update_all_widgets(self.training_metrics.metrics)
+        widget_paths = self.obs_widgets.get_widget_paths()
+        logger.info(f"OBS widgets created in: {self.obs_widgets.widgets_dir}")
+        logger.info("Add these as Text sources in OBS for flexible positioning:")
+        for widget_name, widget_path in widget_paths.items():
+            logger.info(f"  {widget_name}: file://{widget_path}")
+
         battle_num = 0
         
         while self.running:
@@ -347,14 +397,18 @@ class MysteryGiftStreamOrchestrator:
             # Run battle
             self.run_battle(opponent, battle_num)
 
-            # Wait 30 seconds between battles with opponent search
+            # Wait 90 seconds between battles with opponent search
             self._wait_between_battles()
     
     def stop(self):
         """Stop the stream."""
         logger.info("Stopping Mystery-Gift stream...")
         self.running = False
-        
+
+        # Stop continuous human search
+        if self.opponent_matcher.search_active:
+            self.opponent_matcher.stop_continuous_search()
+
         if self.viewer:
             self.viewer.stop()
 

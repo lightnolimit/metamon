@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mystery-Gift Stats Overlay</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 400px;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-label {
+            color: #ccc;
+        }
+
+        .stat-value {
+            font-weight: bold;
+        }
+
+        .win-rate {
+            color: #4CAF50;
+        }
+
+        .streak {
+            color: red;
+        }
+
+        .current-status {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        .recent-performance {
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 8px;
+        }
+
+        .opponent-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .opponent-stat {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .opponent-name {
+            color: #ccc;
+        }
+
+        .opponent-win-rate {
+            font-weight: bold;
+        }
+
+        .timestamp {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="header">
+            Mystery-Gift Stats
+        </div>
+
+        <div class="current-status">
+            Waiting for next battle... (10s remaining)
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Total Battles:</span>
+            <span class="stat-value">0</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Wins/Losses:</span>
+            <span class="stat-value">0/0</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Win Rate:</span>
+            <span class="stat-value win-rate">0.0%</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Current Streak:</span>
+            <span class="stat-value streak">0</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Best Streak:</span>
+            <span class="stat-value">0</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Recent (Last 5):</span>
+            <span class="stat-value recent-performance"></span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stat-label">Opponent Win Rates:</span>
+        </div>
+
+        <div class="opponent-stats">
+            
+        </div>
+
+        <div class="timestamp">
+            Last updated: 00:40:27
+        </div>
+    </div>
+
+    <script>
+        // Auto-refresh every 5 seconds
+        setTimeout(function() {
+            window.location.reload();
+        }, 5000);
+    </script>
+</body>
+</html>
