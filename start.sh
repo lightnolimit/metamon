@@ -38,15 +38,21 @@ if ! command -v node &> /dev/null; then
     exit 1
 fi
 
+# Find Python in conda metamon environment if available
+PYTHON_CMD="python3"
+if [ -d "/opt/homebrew/Caskroom/miniconda/base/envs/metamon/bin" ]; then
+    PYTHON_CMD="/opt/homebrew/Caskroom/miniconda/base/envs/metamon/bin/python3"
+fi
+
 # Check if Playwright is installed
-if ! python3 -c "import playwright" 2>/dev/null; then
+if ! $PYTHON_CMD -c "import playwright" 2>/dev/null; then
     echo -e "${YELLOW}Playwright not found. Installing...${NC}"
     pip install playwright
     playwright install chromium
 fi
 
 # Check if metamon is installed
-if ! python3 -c "import metamon" 2>/dev/null; then
+if ! $PYTHON_CMD -c "import metamon" 2>/dev/null; then
     echo -e "${RED}ERROR: Metamon not installed. Run: pip install -e .${NC}"
     exit 1
 fi
@@ -110,7 +116,7 @@ if [ ! -f "stream_config.py" ]; then
 fi
 
 # Display config info
-python3 -c "
+$PYTHON_CMD -c "
 import stream_config
 config = stream_config.get_tournament_config()
 agents = stream_config.get_tournament_agents()
@@ -198,7 +204,7 @@ cleanup() {
 trap cleanup SIGINT SIGTERM
 
 # Start the tournament stream
-python3 << 'PYTHON_SCRIPT'
+$PYTHON_CMD << 'PYTHON_SCRIPT'
 import stream_config
 from metamon.streaming import start_tournament_stream
 
