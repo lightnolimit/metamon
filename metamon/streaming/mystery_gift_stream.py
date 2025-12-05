@@ -12,6 +12,7 @@ from metamon.streaming.mystery_gift_agent import MysteryGiftAgent
 from metamon.streaming.opponent_matcher import OpponentMatcher, OpponentInfo
 from metamon.streaming.training_tracker import TrainingMetrics
 from metamon.streaming.replay_viewer import ReplayViewer
+from metamon.streaming.obs_overlay import OBSOverlay
 
 logger = logging.getLogger(__name__)
 
@@ -67,15 +68,18 @@ class MysteryGiftStreamOrchestrator:
                 replay_dir=str(self.replay_dir),
                 delay_between_battles=viewer_delay,
             )
-        
+
+        # OBS overlay
+        self.obs_overlay = OBSOverlay(self.stats_dir)
+
         self.enable_ladder = enable_ladder
         self.running = False
         self.battles_completed = 0
     
     def _generate_agent_username(self, battle_num: int) -> str:
         """Generate username for Mystery-Gift."""
-        # Use battle number as suffix for uniqueness
-        return f"{self.agent.base_name}-{battle_num % 10000:04d}"
+        # Use battle number as suffix for uniqueness (support up to 99999 battles)
+        return f"{self.agent.base_name}-{battle_num % 100000:05d}"
     
     def run_battle(self, opponent: OpponentInfo, battle_number: int) -> bool:
         """Run a single battle.
@@ -91,7 +95,14 @@ class MysteryGiftStreamOrchestrator:
         opponent_display = self.opponent_matcher.get_opponent_display_name(opponent)
         
         logger.info(f"Battle {battle_number}: {agent_username} vs {opponent_display}")
-        
+
+        # Update OBS overlay with battle start status
+        battle_status = f"Battle {battle_number}: Starting vs {opponent_display}"
+        self.obs_overlay.update_stats({
+            "current_battle_status": battle_status,
+            "agent_name": agent_username
+        })
+
         # Save current opponent status
         self._save_current_status(opponent, opponent_display)
         
@@ -146,13 +157,29 @@ class MysteryGiftStreamOrchestrator:
         self.training_metrics.save_stream_overlay(
             str(self.stats_dir / "mystery_gift_overlay.txt")
         )
-        
+
+        # Update OBS overlay with current battle status
+        battle_status = f"Battle {battle_number}: {'WON' if mystery_gift_won else 'LOST'} vs {opponent_display}"
+        self.obs_overlay.update_stats({
+            "current_battle_status": battle_status,
+            "agent_name": agent_username
+        })
+
         # Cleanup
         try:
             env.close(purge=True)
         except Exception as e:
             logger.warning(f"Error closing environment: {e}")
-        
+
+        # Force garbage collection to free memory
+        import gc
+        gc.collect()
+
+        # Clean up old replays (keep last 10)
+        self._cleanup_old_replays()
+
+        self.battles_completed += 1
+
         return mystery_gift_won
     
     def _save_current_status(self, opponent: OpponentInfo, opponent_display: str):
@@ -182,7 +209,44 @@ class MysteryGiftStreamOrchestrator:
         
         with open(status_file, 'w') as f:
             f.write(status)
-    
+
+    def _cleanup_old_replays(self):
+        """Clean up old replay files to keep only the last 10 battles."""
+        try:
+            # Find HTML replay directories
+            for format_dir in self.output_dir.glob("*/html_replays"):
+                if not format_dir.is_dir():
+                    continue
+
+                # Get all HTML replays and sort by modification time
+                replay_files = list(format_dir.glob("battle-*.html"))
+                replay_files.sort(key=lambda x: x.stat().st_mtime, reverse=True)
+
+                # Keep only the last 10
+                if len(replay_files) > 10:
+                    for old_replay in replay_files[10:]:
+                        try:
+                            old_replay.unlink()
+                            logger.debug(f"Removed old replay: {old_replay.name}")
+                        except Exception as e:
+                            logger.warning(f"Failed to remove {old_replay}: {e}")
+
+            # Also clean up compressed replay files
+            for format_dir in self.output_dir.glob("*/"):
+                if format_dir.is_dir():
+                    lz4_files = list(format_dir.glob("*.json.lz4"))
+                    if len(lz4_files) > 10:
+                        lz4_files.sort(key=lambda x: x.stat().st_mtime, reverse=True)
+                        for old_lz4 in lz4_files[10:]:
+                            try:
+                                old_lz4.unlink()
+                                logger.debug(f"Removed old LZ4 file: {old_lz4.name}")
+                            except Exception as e:
+                                logger.warning(f"Failed to remove {old_lz4}: {e}")
+
+        except Exception as e:
+            logger.warning(f"Error during replay cleanup: {e}")
+
     def start_viewer(self):
         """Start replay viewer in background thread."""
         if not self.viewer:
@@ -204,9 +268,39 @@ class MysteryGiftStreamOrchestrator:
         self.viewer_thread = threading.Thread(target=viewer_loop, daemon=True)
         self.viewer_thread.start()
         logger.info("Replay viewer started in background")
-        
+
         # Give viewer time to start
         time.sleep(3)
+
+    def _wait_between_battles(self):
+        """Wait 30 seconds between battles with opponent search."""
+        logger.info("Waiting 30 seconds before next battle...")
+
+        # Update OBS overlay with waiting status
+        self.obs_overlay.update_stats({
+            "current_battle_status": "Waiting for next battle...",
+            "agent_name": self.agent.base_name
+        })
+
+        # Split wait into 5-second intervals to check for stop signal
+        for i in range(6):  # 6 * 5 = 30 seconds
+            if not self.running:
+                break
+
+            remaining = 30 - (i * 5)
+            if remaining > 0:
+                # Update OBS overlay with countdown
+                self.obs_overlay.update_stats({
+                    "current_battle_status": f"Waiting for next battle... ({remaining}s remaining)",
+                    "agent_name": self.agent.base_name
+                })
+
+            time.sleep(5)
+
+            # Only search for human opponents during wait
+            if self.enable_ladder and i == 2:  # Check once at 15 seconds
+                logger.info("Checking for human opponents...")
+                # Could add human opponent check here if needed
     
     def run_training_stream(self, max_battles: Optional[int] = None):
         """Run the training stream.
@@ -227,7 +321,15 @@ class MysteryGiftStreamOrchestrator:
             self.start_viewer()
             logger.info("Waiting for viewer to fully start...")
             time.sleep(5)
-        
+
+        # Start OBS overlay
+        self.obs_overlay.start()
+        overlay_path = self.obs_overlay.overlay_file
+        logger.info(f"OBS overlay started: {overlay_path}")
+        logger.info("Add this as a Browser source in OBS:")
+        logger.info(f"  URL: file://{overlay_path.absolute()}")
+        logger.info(f"  Width: 450, Height: Auto")
+
         battle_num = 0
         
         while self.running:
@@ -244,9 +346,9 @@ class MysteryGiftStreamOrchestrator:
             
             # Run battle
             self.run_battle(opponent, battle_num)
-            
-            # Small delay between battles
-            time.sleep(2)
+
+            # Wait 30 seconds between battles with opponent search
+            self._wait_between_battles()
     
     def stop(self):
         """Stop the stream."""

@@ -1,762 +1,444 @@
 {
   "players": {
-    "Scout": {
-      "player_name": "Scout",
-      "total_battles": 425,
-      "wins": 232,
-      "losses": 193,
-      "current_streak": 0,
-      "best_streak": 6,
-      "last_updated": "2025-12-04T20:29:29.575863"
+    "Lass": {
+      "player_name": "Lass",
+      "total_battles": 464,
+      "wins": 133,
+      "losses": 331,
+      "current_streak": 1,
+      "best_streak": 4,
+      "last_updated": "2025-12-04T22:35:12.233793"
     },
     "Rookie": {
       "player_name": "Rookie",
-      "total_battles": 462,
-      "wins": 151,
-      "losses": 311,
+      "total_battles": 504,
+      "wins": 166,
+      "losses": 338,
       "current_streak": 0,
       "best_streak": 5,
-      "last_updated": "2025-12-04T20:29:21.853242"
+      "last_updated": "2025-12-04T22:35:12.296760"
+    },
+    "Scout": {
+      "player_name": "Scout",
+      "total_battles": 460,
+      "wins": 252,
+      "losses": 208,
+      "current_streak": 0,
+      "best_streak": 6,
+      "last_updated": "2025-12-04T22:33:57.209587"
     },
     "Ace": {
       "player_name": "Ace",
-      "total_battles": 414,
-      "wins": 357,
-      "losses": 57,
+      "total_battles": 450,
+      "wins": 388,
+      "losses": 62,
       "current_streak": 4,
       "best_streak": 29,
-      "last_updated": "2025-12-04T20:29:34.361962"
-    },
-    "Lass": {
-      "player_name": "Lass",
-      "total_battles": 423,
-      "wins": 122,
-      "losses": 301,
-      "current_streak": 0,
-      "best_streak": 4,
-      "last_updated": "2025-12-04T20:29:34.361408"
+      "last_updated": "2025-12-04T22:33:57.210204"
     }
   },
   "matchup_history": [
     {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:21:53.647520"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:21:56.788524"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:22:02.027228"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:22:04.850957"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:22:09.646733"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:22:12.374983"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:22:17.167327"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:22:19.888709"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:22:24.700715"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:22:27.463460"
-    },
-    {
       "player1": "Lass",
       "player2": "Rookie",
       "winner": "Lass",
-      "timestamp": "2025-12-04T20:22:32.418861"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:22:35.331437"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:22:40.756544"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:22:43.708785"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:22:46.710394"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:22:51.468312"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:22:54.474397"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:22:59.501108"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:02.707133"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:06.117523"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:10.821818"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:13.577561"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:18.344521"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:21.811130"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:23:26.781745"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:23:29.652815"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:34.428650"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:37.439568"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:23:42.198951"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:23:44.945885"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:49.861382"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:23:52.666774"
+      "timestamp": "2025-12-04T22:28:38.018434"
     },
     {
       "player1": "Lass",
       "player2": "Rookie",
       "winner": "Rookie",
-      "timestamp": "2025-12-04T20:23:57.951393"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:24:01.228588"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:24:04.117913"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:09.397131"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:12.526755"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:24:17.645613"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:24:20.900564"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:24:25.895555"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:24:28.742026"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:24:31.590743"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:36.440909"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:39.255106"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:24:44.023783"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:47.206991"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:50.198770"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:55.008693"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:24:57.776462"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:25:02.429836"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:25:05.740593"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:25:10.723112"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:25:13.716809"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:25:18.633184"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:25:21.545809"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:25:26.288065"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:25:29.334458"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:25:34.492559"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:25:38.308631"
+      "timestamp": "2025-12-04T22:28:41.993365"
     },
     {
       "player1": "Lass",
       "player2": "Rookie",
       "winner": "Rookie",
-      "timestamp": "2025-12-04T20:25:43.408432"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:25:46.893041"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:25:50.212188"
+      "timestamp": "2025-12-04T22:28:44.887514"
     },
     {
       "player1": "Lass",
       "player2": "Scout",
       "winner": "Scout",
-      "timestamp": "2025-12-04T20:25:54.983065"
+      "timestamp": "2025-12-04T22:28:49.539889"
     },
     {
       "player1": "Lass",
       "player2": "Scout",
       "winner": "Scout",
-      "timestamp": "2025-12-04T20:25:57.714793"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:02.524859"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:05.296557"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:10.062153"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:12.851739"
+      "timestamp": "2025-12-04T22:28:52.319399"
     },
     {
       "player1": "Scout",
       "player2": "Rookie",
       "winner": "Scout",
-      "timestamp": "2025-12-04T20:26:18.280861"
+      "timestamp": "2025-12-04T22:28:57.468415"
     },
     {
       "player1": "Scout",
       "player2": "Rookie",
       "winner": "Scout",
-      "timestamp": "2025-12-04T20:26:21.289277"
+      "timestamp": "2025-12-04T22:29:00.871336"
     },
     {
       "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:26:26.032198"
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:29:05.873580"
     },
     {
       "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:26:28.749198"
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:29:08.727602"
     },
     {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:26:34.255387"
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:29:13.616155"
     },
     {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:26:37.093690"
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:29:16.677000"
     },
     {
       "player1": "Ace",
       "player2": "Rookie",
       "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:42.225666"
+      "timestamp": "2025-12-04T22:29:21.756625"
     },
     {
       "player1": "Ace",
       "player2": "Rookie",
       "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:45.078066"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:49.856706"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:52.627812"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:26:57.470434"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:27:00.227813"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:27:05.148453"
+      "timestamp": "2025-12-04T22:29:25.664716"
     },
     {
       "player1": "Lass",
       "player2": "Rookie",
       "winner": "Rookie",
-      "timestamp": "2025-12-04T20:27:08.195817"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:27:11.409181"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:27:16.909874"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:27:21.297660"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:27:23.483281"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:27:28.221100"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:27:30.946629"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Rookie",
-      "timestamp": "2025-12-04T20:27:35.979627"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:27:38.825637"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:27:41.704531"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:27:46.659634"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:27:49.403641"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:27:54.246743"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:27:57.123429"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:01.898969"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:04.820194"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:10.079721"
-    },
-    {
-      "player1": "Ace",
-      "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:12.974779"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:28:17.696873"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Scout",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:28:20.567391"
+      "timestamp": "2025-12-04T22:29:31.267290"
     },
     {
       "player1": "Lass",
       "player2": "Rookie",
       "winner": "Lass",
-      "timestamp": "2025-12-04T20:28:25.857198"
+      "timestamp": "2025-12-04T22:29:34.222877"
     },
     {
       "player1": "Lass",
       "player2": "Rookie",
       "winner": "Lass",
-      "timestamp": "2025-12-04T20:28:28.740418"
+      "timestamp": "2025-12-04T22:29:37.108281"
     },
     {
-      "player1": "Lass",
+      "player1": "Scout",
       "player2": "Ace",
       "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:33.518655"
+      "timestamp": "2025-12-04T22:29:41.917188"
     },
     {
-      "player1": "Lass",
+      "player1": "Scout",
       "player2": "Ace",
       "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:36.237961"
+      "timestamp": "2025-12-04T22:29:44.700386"
     },
     {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:41.075303"
-    },
-    {
-      "player1": "Lass",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:28:43.829772"
-    },
-    {
-      "player1": "Lass",
+      "player1": "Ace",
       "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:28:49.085416"
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:29:49.708759"
     },
     {
-      "player1": "Lass",
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:29:52.566669"
+    },
+    {
+      "player1": "Scout",
       "player2": "Rookie",
       "winner": "Rookie",
-      "timestamp": "2025-12-04T20:28:51.997589"
+      "timestamp": "2025-12-04T22:29:57.768023"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:30:01.429882"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:30:04.444894"
     },
     {
       "player1": "Lass",
-      "player2": "Rookie",
-      "winner": "Lass",
-      "timestamp": "2025-12-04T20:28:55.008989"
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:30:10.044303"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:30:13.156404"
     },
     {
       "player1": "Lass",
       "player2": "Scout",
       "winner": "Scout",
-      "timestamp": "2025-12-04T20:28:59.768949"
+      "timestamp": "2025-12-04T22:30:17.911945"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Lass",
+      "timestamp": "2025-12-04T22:30:20.648617"
     },
     {
       "player1": "Lass",
       "player2": "Scout",
       "winner": "Scout",
-      "timestamp": "2025-12-04T20:29:02.458884"
+      "timestamp": "2025-12-04T22:30:23.389677"
     },
     {
-      "player1": "Ace",
-      "player2": "Rookie",
+      "player1": "Scout",
+      "player2": "Ace",
       "winner": "Ace",
-      "timestamp": "2025-12-04T20:29:07.458239"
+      "timestamp": "2025-12-04T22:30:28.196110"
     },
     {
-      "player1": "Ace",
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:30:30.904010"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:30:35.696200"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:30:38.415409"
+    },
+    {
+      "player1": "Lass",
       "player2": "Rookie",
       "winner": "Rookie",
-      "timestamp": "2025-12-04T20:29:10.832782"
+      "timestamp": "2025-12-04T22:30:43.909248"
     },
     {
-      "player1": "Ace",
+      "player1": "Lass",
       "player2": "Rookie",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:29:13.816485"
+      "winner": "Lass",
+      "timestamp": "2025-12-04T22:30:46.880840"
     },
     {
-      "player1": "Scout",
+      "player1": "Lass",
       "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:29:18.952296"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Rookie",
-      "winner": "Scout",
-      "timestamp": "2025-12-04T20:29:21.853453"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:29:26.765238"
-    },
-    {
-      "player1": "Scout",
-      "player2": "Ace",
-      "winner": "Ace",
-      "timestamp": "2025-12-04T20:29:29.576491"
+      "winner": "Lass",
+      "timestamp": "2025-12-04T22:30:50.431520"
     },
     {
       "player1": "Lass",
       "player2": "Ace",
       "winner": "Ace",
-      "timestamp": "2025-12-04T20:29:34.362240"
+      "timestamp": "2025-12-04T22:30:55.261239"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:30:57.991188"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:31:03.200395"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:31:06.498233"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:31:13.604760"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:31:17.985995"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:31:23.081298"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:31:27.875087"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:31:40.710499"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:31:46.289239"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:31:49.909710"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:31:56.843602"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:32:10.339300"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Rookie",
+      "winner": "Lass",
+      "timestamp": "2025-12-04T22:32:17.098293"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Rookie",
+      "winner": "Lass",
+      "timestamp": "2025-12-04T22:32:30.351647"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:32:35.877535"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:32:41.005860"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:32:48.114829"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:32:57.661212"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:33:06.369972"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:33:10.565896"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:33:16.038395"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Scout",
+      "winner": "Scout",
+      "timestamp": "2025-12-04T22:33:20.241439"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:33:32.868000"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:33:36.630904"
+    },
+    {
+      "player1": "Ace",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:33:42.506799"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:33:46.369109"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:33:49.294507"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:33:54.231920"
+    },
+    {
+      "player1": "Scout",
+      "player2": "Ace",
+      "winner": "Ace",
+      "timestamp": "2025-12-04T22:33:57.210908"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Rookie",
+      "winner": "Rookie",
+      "timestamp": "2025-12-04T22:34:03.259130"
+    },
+    {
+      "player1": "Lass",
+      "player2": "Rookie",
+      "winner": "Lass",
+      "timestamp": "2025-12-04T22:35:12.324149"
     }
   ]
 }

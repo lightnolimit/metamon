@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mystery-Gift-0050 vs Grunt - GEN1OU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Base URL so all assets load from Pokemon Showdown CDN -->
+    <base href="https://play.pokemonshowdown.com/" />
+    
+    <!-- Load Pokemon Showdown CSS for proper replay rendering -->
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/battle.css" />
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/replay.css" />
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+        }
+        /* Show the battle log by default */
+        .battle-log {
+            display: block !important;
+        }
+        /* Full screen layout for streaming */
+        .ps-room {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<!-- Container for Pokemon Showdown replay -->
+<div class="ps-room ps-room-opaque" data-battle>
+    <div class="battle">
+        <div class="battle-log" data-log></div>
+    </div>
+</div>
+
+<!-- Battle data -->
+<script type="text/plain" class="battle-log-data">|init|battle
+|title|Mystery-Gift-0050 vs. Grunt-0028
+|j|☆Mystery-Gift-0050
+|j|☆Grunt-0028
+|t:|1764907878
+|gametype|singles
+|player|p1|Mystery-Gift-0050|170|
+|player|p2|Grunt-0028|169|
+|gen|1
+|tier|[Gen 1] OU
+|rule|Desync Clause Mod: Desyncs changed to move failure.
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Freeze Clause Mod: Limit one foe frozen
+|rule|Species Clause: Limit one of each Pokémon
+|rule|OHKO Clause: OHKO moves are banned
+|rule|Evasion Moves Clause: Evasion moves are banned
+|rule|Endless Battle Clause: Forcing endless battles is banned
+|rule|HP Percentage Mod: HP is shown in percentages
+
+|t:|1764907878
+|teamsize|p1|6
+|teamsize|p2|6
+|start
+|switch|p1a: Alakazam|Alakazam|313/313
+|switch|p2a: Jynx|Jynx|100/100
+|turn|1
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"313/313","active":true,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":2}
+
+|t:|1764907879
+|move|p1a: Alakazam|Recover|p1a: Alakazam
+|-fail|p1a: Alakazam
+|move|p2a: Jynx|Blizzard|p1a: Alakazam
+|-crit|p1a: Alakazam
+|-damage|p1a: Alakazam|99/313
+
+|upkeep
+|turn|2
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":31,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"99/313","active":true,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":4}
+
+|t:|1764907879
+|switch|p1a: Gengar|Gengar|323/323
+|move|p2a: Jynx|Blizzard|p1a: Gengar|[miss]
+|-miss|p2a: Jynx
+
+|upkeep
+|turn|3
+|request|{"active":[{"moves":[{"move":"Hypnosis","id":"hypnosis","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Explosion","id":"explosion","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":true,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"99/313","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":6}
+
+|t:|1764907879
+|switch|p1a: Snorlax|Snorlax|523/523
+|move|p2a: Jynx|Psychic|p1a: Snorlax
+|-crit|p1a: Snorlax
+|-damage|p1a: Snorlax|241/523
+|-unboost|p1a: Snorlax|spa|1
+|-unboost|p1a: Snorlax|spd|1
+
+|upkeep
+|turn|4
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Self-Destruct","id":"selfdestruct","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"241/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"99/313","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":8}
+
+|t:|1764907879
+|switch|p1a: Alakazam|Alakazam|99/313
+|move|p2a: Jynx|Blizzard|p1a: Alakazam
+|-damage|p1a: Alakazam|0 fnt
+|faint|p1a: Alakazam
+|request|{"forceSwitch":[true],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":true,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"241/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":10}
+
+|t:|1764907879
+|switch|p1a: Gengar|Gengar|323/323
+|turn|5
+|request|{"active":[{"moves":[{"move":"Hypnosis","id":"hypnosis","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Explosion","id":"explosion","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":true,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"241/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":12}
+
+|t:|1764907879
+|move|p1a: Gengar|Hypnosis|p2a: Jynx
+|-status|p2a: Jynx|slp|[from] move: Hypnosis
+|-curestatus|p2a: Jynx|slp|[msg]
+
+|upkeep
+|turn|6
+|request|{"active":[{"moves":[{"move":"Hypnosis","id":"hypnosis","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Explosion","id":"explosion","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":true,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"241/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":14}
+
+|t:|1764907879
+|switch|p1a: Snorlax|Snorlax|241/523
+|move|p2a: Jynx|Psychic|p1a: Snorlax
+|-damage|p1a: Snorlax|117/523
+
+|upkeep
+|turn|7
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Self-Destruct","id":"selfdestruct","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"117/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":16}
+
+|t:|1764907879
+|move|p2a: Jynx|Blizzard|p1a: Snorlax
+|-crit|p1a: Snorlax
+|-damage|p1a: Snorlax|0 fnt
+|faint|p1a: Snorlax
+|request|{"forceSwitch":[true],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":18}
+
+|t:|1764907879
+|switch|p1a: Chansey|Chansey|703/703
+|turn|8
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":true,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":20}
+
+|t:|1764907879
+|move|p2a: Jynx|Blizzard|p1a: Chansey|[miss]
+|-miss|p2a: Jynx
+|move|p1a: Chansey|Thunder Wave|p2a: Jynx
+|-status|p2a: Jynx|par
+
+|upkeep
+|turn|9
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":true,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":22}
+
+|t:|1764907879
+|move|p1a: Chansey|Ice Beam|p2a: Jynx
+|-resisted|p2a: Jynx
+|-damage|p2a: Jynx|89/100 par
+|move|p2a: Jynx|Blizzard|p1a: Chansey
+|-damage|p1a: Chansey|574/703
+|-status|p1a: Chansey|frz
+
+|upkeep
+|turn|10
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"574/703 frz","active":true,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":24}
+
+|t:|1764907879
+|cant|p1a: Chansey|frz
+|move|p2a: Jynx|Blizzard|p1a: Chansey
+|-crit|p1a: Chansey
+|-damage|p1a: Chansey|299/703 frz
+
+|upkeep
+|turn|11
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"299/703 frz","active":true,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":26}
+
+|t:|1764907879
+|switch|p1a: Gengar|Gengar|323/323
+|cant|p2a: Jynx|par
+
+|upkeep
+|turn|12
+|request|{"active":[{"moves":[{"move":"Hypnosis","id":"hypnosis","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Seismic Toss","id":"seismictoss","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Explosion","id":"explosion","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Gengar","details":"Gengar","condition":"323/323","active":true,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"299/703 frz","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":28}
+
+|t:|1764907879
+|move|p1a: Gengar|Explosion|p2a: Jynx
+|-damage|p2a: Jynx|0 fnt
+|faint|p2a: Jynx
+|faint|p1a: Gengar
+|request|{"forceSwitch":[true],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":true,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"299/703 frz","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":30}
+
+|t:|1764907879
+|switch|p1a: Chansey|Chansey|299/703 frz
+|switch|p2a: Exeggutor|Exeggutor|100/100
+|turn|13
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Ice Beam","id":"icebeam","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"299/703 frz","active":true,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":32}
+
+|t:|1764907879
+|move|p2a: Exeggutor|Explosion|p1a: Chansey
+|-damage|p1a: Chansey|0 fnt
+|faint|p1a: Chansey
+|faint|p2a: Exeggutor
+|request|{"forceSwitch":[true],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":true,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":34}
+
+|t:|1764907879
+|switch|p2a: Tauros|Tauros|100/100
+|switch|p1a: Tauros|Tauros|353/353
+|turn|14
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":36}
+
+|t:|1764907879
+|switch|p1a: Starmie|Starmie|323/323
+|move|p2a: Tauros|Hyper Beam|p1a: Starmie|[miss]
+|-miss|p2a: Tauros
+
+|upkeep
+|turn|15
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":true,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":38}
+
+|t:|1764907879
+|move|p1a: Starmie|Psychic|p2a: Tauros
+|-damage|p2a: Tauros|66/100
+|-unboost|p2a: Tauros|spa|1
+|-unboost|p2a: Tauros|spd|1
+|move|p2a: Tauros|Hyper Beam|p1a: Starmie
+|-damage|p1a: Starmie|119/323
+|-mustrecharge|p2a: Tauros
+
+|upkeep
+|turn|16
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"119/323","active":true,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":40}
+
+|t:|1764907879
+|move|p1a: Starmie|Thunder Wave|p2a: Tauros
+|-status|p2a: Tauros|par
+|cant|p2a: Tauros|recharge
+
+|upkeep
+|turn|17
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":31,"maxpp":32,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"119/323","active":true,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":42}
+
+|t:|1764907879
+|move|p1a: Starmie|Thunder Wave|p2a: Tauros
+|-fail|p2a: Tauros|par
+|cant|p2a: Tauros|par
+
+|upkeep
+|turn|18
+|request|{"active":[{"moves":[{"move":"Thunder Wave","id":"thunderwave","pp":30,"maxpp":32,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":15,"maxpp":16,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"119/323","active":true,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":44}
+
+|t:|1764907879
+|switch|p1a: Tauros|Tauros|353/353
+|move|p2a: Tauros|Hyper Beam|p1a: Tauros
+|-damage|p1a: Tauros|170/353
+|-mustrecharge|p2a: Tauros
+
+|upkeep
+|turn|19
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"119/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":46}
+
+|t:|1764907879
+|move|p1a: Tauros|Body Slam|p2a: Tauros
+|-damage|p2a: Tauros|34/100 par
+|cant|p2a: Tauros|recharge
+
+|upkeep
+|turn|20
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"119/323","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":48}
+
+|t:|1764907879
+|switch|p1a: Starmie|Starmie|119/323
+|move|p2a: Tauros|Hyper Beam|p1a: Starmie
+|-crit|p1a: Starmie
+|-damage|p1a: Starmie|0 fnt
+|faint|p1a: Starmie
+|request|{"forceSwitch":[true],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":true,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":50}
+
+|t:|1764907879
+|switch|p1a: Tauros|Tauros|170/353
+|turn|21
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":52}
+
+|t:|1764907879
+|move|p1a: Tauros|Earthquake|p2a: Tauros
+|-damage|p2a: Tauros|10/100 par
+|cant|p2a: Tauros|par
+
+|upkeep
+|turn|22
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":15,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":54}
+
+|t:|1764907879
+|move|p1a: Tauros|Blizzard|p2a: Tauros
+|-crit|p2a: Tauros
+|-damage|p2a: Tauros|0 fnt
+|faint|p2a: Tauros
+|request|{"wait":true,"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":56}
+
+|t:|1764907879
+|switch|p2a: Snorlax|Snorlax|100/100
+|turn|23
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":15,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":7,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"Mystery-Gift-0050","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"170/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","earthquake","hyperbeam","blizzard"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","earthquake","hyperbeam","selfdestruct"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Gengar","details":"Gengar","condition":"0 fnt","active":false,"stats":{"atk":228,"def":218,"spa":358,"spd":358,"spe":318},"moves":["hypnosis","thunderbolt","seismictoss","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Alakazam","details":"Alakazam","condition":"0 fnt","active":false,"stats":{"atk":107,"def":188,"spa":368,"spd":368,"spe":338},"moves":["thunderwave","seismictoss","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":17,"def":108,"spa":308,"spd":308,"spe":198},"moves":["thunderwave","icebeam","thunderbolt","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":157,"def":268,"spa":298,"spd":298,"spe":328},"moves":["thunderwave","blizzard","psychic","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":58}
+
+|t:|1764907879
+|move|p1a: Tauros|Body Slam|p2a: Snorlax
+|-damage|p2a: Snorlax|78/100
+|move|p2a: Snorlax|Self-Destruct|p1a: Tauros
+|-damage|p1a: Tauros|0 fnt
+|faint|p1a: Tauros
+|faint|p2a: Snorlax
+
+|win|Grunt-0028
+|deinit</script>
+
+<!-- Pokemon Showdown replay embed script -->
+<script src="https://play.pokemonshowdown.com/js/replay-embed.js"></script>
+</body>
+</html>

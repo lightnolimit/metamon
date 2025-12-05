@@ -2,7 +2,24 @@
   "permissions": {
     "allow": [
       "Bash(export METAMON_CACHE_DIR=/Users/area/repos/metamon/.cache:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(./RUN_STREAM.sh:*)",
+      "Bash(python3:*)",
+      "Bash(conda info:*)",
+      "Bash(/opt/homebrew/opt/python@3.14/bin/python3.14:*)",
+      "Bash(/opt/homebrew/Caskroom/miniconda/base/envs/metamon/bin/python3:*)",
+      "Bash(source:*)",
+      "Bash(conda activate:*)",
+      "Bash(conda:*)",
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(lsof:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
