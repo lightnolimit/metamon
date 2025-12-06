@@ -150,6 +150,7 @@ class TournamentStreamOrchestrator:
                 player_name=agent1.name,
                 opponent_name=agent2.name,
                 battle_format=self.config.battle_format,
+                agent_type="bot",
             )
             logger.info(f"Saved HTML replay: battle-{battle_id}.html")
         except Exception as e:

@@ -1,5 +1,6 @@
 """Generate HTML replays from Pokemon Showdown battle logs"""
 import os
+import time
 from typing import Optional
 
 
@@ -83,9 +84,10 @@ def save_replay_html(
     player_name: str = "Player1",
     opponent_name: str = "Player2",
     battle_format: str = "gen1ou",
+    agent_type: str = "bot",
 ) -> str:
     """Save HTML replay to file.
-    
+
     Args:
         battle_log: Raw Pokemon Showdown battle log
         battle_id: Unique identifier for this battle
@@ -93,7 +95,8 @@ def save_replay_html(
         player_name: Name of the player
         opponent_name: Name of the opponent
         battle_format: Battle format
-    
+        agent_type: Type of agent ('bot' or 'live') for priority naming
+
     Returns:
         Path to saved HTML file
     """
@@ -107,7 +110,17 @@ def save_replay_html(
         battle_format=battle_format,
     )
     
-    filepath = os.path.join(output_dir, f"battle-{battle_id}.html")
+    # Priority-based naming: live-agent replays get priority, bot replays are secondary
+    timestamp = int(time.time())
+    if agent_type == "live":
+        filename = f"live-{timestamp}-{battle_id}.html"
+    elif agent_type == "bot":
+        filename = f"bot-{timestamp}-{battle_id}.html"
+    else:
+        # Fallback to original naming for unknown agent types
+        filename = f"battle-{battle_id}.html"
+
+    filepath = os.path.join(output_dir, filename)
     
     # Atomic write to avoid partial files
     temp_path = filepath + ".tmp"

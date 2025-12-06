@@ -1,8 +1,9 @@
 """Automatic sequential replay viewer for OBS streaming"""
 import time
 import os
+import re
 from pathlib import Path
-from typing import Optional, Callable
+from typing import Optional, Callable, List, Dict
 import logging
 
 logger = logging.getLogger(__name__)
@@ -239,10 +240,90 @@ class ReplayViewer:
         base_duration = 30.0
         return base_duration / self.speed
     
+    def get_priority_replays(self) -> Dict[str, List[Path]]:
+        """Get replays grouped by priority.
+
+        Returns:
+            Dictionary with 'live', 'bot', and 'fallback' keys containing lists of replay files
+        """
+        replays = {
+            'live': [],     # Priority 1: Live agent replays
+            'bot': [],      # Priority 2: Bot replays
+            'fallback': []  # Priority 3: Fallback for any other files
+        }
+
+        # Get all HTML files in the replay directory
+        for replay_file in self.replay_dir.glob("*.html"):
+            if replay_file in self.played_replays:
+                continue
+
+            filename = replay_file.name
+
+            # Categorize by filename prefix
+            if filename.startswith("live-"):
+                replays['live'].append(replay_file)
+            elif filename.startswith("bot-"):
+                replays['bot'].append(replay_file)
+            else:
+                # Fallback for any other naming patterns
+                replays['fallback'].append(replay_file)
+
+        # Sort each category by timestamp (extracted from filename)
+        for category in replays:
+            replays[category].sort(key=self._extract_timestamp, reverse=False)
+
+        return replays
+
+    def get_next_replay(self) -> Optional[Path]:
+        """Get next replay based on priority.
+
+        Priority order: live > bot > fallback
+
+        Returns:
+            Path to next replay file, or None if no replays available
+        """
+        priority_replays = self.get_priority_replays()
+
+        # Always play live agent replays first
+        if priority_replays['live']:
+            return priority_replays['live'][0]
+
+        # If no live replays, play bot replays
+        if priority_replays['bot']:
+            return priority_replays['bot'][0]
+
+        # Fallback to any other replays
+        if priority_replays['fallback']:
+            return priority_replays['fallback'][0]
+
+        return None
+
+    def _extract_timestamp(self, replay_path: Path) -> int:
+        """Extract timestamp from priority-based filename.
+
+        Args:
+            replay_path: Path to replay file
+
+        Returns:
+            Timestamp as integer, or 0 if not found
+        """
+        filename = replay_path.name
+
+        # Match patterns: live-{timestamp}-{id}.html or bot-{timestamp}-{id}.html
+        match = re.match(r'^(live|bot)-(\d+)-', filename)
+        if match:
+            return int(match.group(2))
+
+        # Fallback: try to extract from original battle-{id}.html format
+        match = re.match(r'^battle-(\d+)', filename)
+        if match:
+            return int(match.group(2))
+
+        return 0  # Default timestamp for unknown formats
+
     def get_unplayed_replays(self):
-        """Get list of replays that haven't been played yet."""
-        all_replays = sorted(self.replay_dir.glob("battle-*.html"))
-        return [r for r in all_replays if r not in self.played_replays]
+        """Get list of replays that haven't been played yet (legacy compatibility)."""
+        return [self.get_next_replay()] if self.get_next_replay() else []
     
     def watch_directory(self, max_replays: Optional[int] = None):
         """Continuously watch directory and play new replays.
@@ -254,10 +335,9 @@ class ReplayViewer:
         replays_played = 0
         
         while self.running:
-            unplayed = self.get_unplayed_replays()
-            
-            if unplayed:
-                replay = unplayed[0]  # Play oldest unplayed replay
+            replay = self.get_next_replay()
+
+            if replay:
                 self.play_replay(replay)
                 replays_played += 1
                 

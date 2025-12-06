@@ -435,6 +435,13 @@ class PokeEnvWrapper(OpenAIGymEnv):
                         html_dir = os.path.join(
                             self.save_trajectories_to, "html_replays"
                         )
+                        # Determine agent type from username for priority-based naming
+                        agent_type = "bot"  # default
+                        if self.player_username.startswith("mysgift-l-"):
+                            agent_type = "live"
+                        elif self.player_username.startswith("mysgift-b-"):
+                            agent_type = "bot"
+
                         html_path = save_replay_html(
                             battle_log=battle_log,
                             battle_id=battle_id,
@@ -442,6 +449,7 @@ class PokeEnvWrapper(OpenAIGymEnv):
                             player_name=self.player_username,
                             opponent_name=opponent_name,
                             battle_format=self.metamon_battle_format,
+                            agent_type=agent_type,
                         )
                         # Verify it worked
                         if os.path.exists(html_path):

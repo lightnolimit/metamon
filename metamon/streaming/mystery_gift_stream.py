@@ -249,8 +249,8 @@ class MysteryGiftStreamOrchestrator:
                 if not format_dir.is_dir():
                     continue
 
-                # Get all HTML replays and sort by modification time
-                replay_files = list(format_dir.glob("battle-*.html"))
+                # Get all HTML replays (both old and new naming) and sort by modification time
+                replay_files = list(format_dir.glob("*.html"))
                 replay_files.sort(key=lambda x: x.stat().st_mtime, reverse=True)
 
                 # Keep only the last 10
