@@ -1,22 +1,24 @@
 ╔══════════════════════════════════════════════════════╗
-║                     Mystery-Gift                     ║
+║               Mystery-Gift-MultiAgent                ║
 ╠══════════════════════════════════════════════════════╣
 ║                                                      ║
-║  Total Battles:   240                            ║
-║  Overall Win Rate:  12.5%                         ║
-║  Recent (100):  50.0%                              ║
+║  System Statistics:                                   ║
+║  Active Agents:  5                             ║
+║  Total Created:  53                          ║
+║  Total Battles:    53                            ║
+║  Overall Win Rate:  13.2%                         ║
+║  Recent (200):  14.6%                              ║
 ║                                                      ║
-║  Record:   30W -  210L                             ║
+║  Combined Record:    7W -   46L                    ║
 ║  Current Streak:   0                             ║
-║  Best Streak:   3                                ║
+║  Best Streak:   2                                ║
 ║                                                      ║
 ╠══════════════════════════════════════════════════════╣
-║  VS HUMANS:     0 battles  |    0.0% win rate  ║
-║  VS BOTS:     240 battles  |   12.5% win rate  ║
+║  VS HUMANS:     2 battles  |   50.0% win rate  ║
+║  VS BOTS:      51 battles  |   11.8% win rate  ║
 ╠══════════════════════════════════════════════════════╣
 ║                                                      ║
 ║  Training Progress:                                  ║
-║    Episodes:   240                                ║
-║    Avg Reward:  -80.25                            ║
-║                                                      ║
-╚══════════════════════════════════════════════════════╝
+║    Episodes:    53                                ║
+║    Avg Reward:  -78.74                            ║
+║                                                      ║╚══════════════════════════════════════════════════════╝

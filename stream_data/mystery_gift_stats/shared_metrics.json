@@ -1,0 +1,659 @@
+{
+  "system_name": "Mystery-Gift-MultiAgent",
+  "active_agents": 5,
+  "total_agents_created": 53,
+  "total_battles": 53,
+  "wins": 7,
+  "losses": 46,
+  "vs_humans_battles": 2,
+  "vs_humans_wins": 1,
+  "vs_bots_battles": 51,
+  "vs_bots_wins": 6,
+  "training_episodes": 53,
+  "total_reward": -4173.025767781691,
+  "average_reward": -78.73633524116397,
+  "current_streak": 0,
+  "best_streak": 2,
+  "recent_wins": 6,
+  "recent_total": 41,
+  "started_at": "2025-12-05T10:57:52.796735",
+  "last_updated": "2025-12-05T13:35:33.353895",
+  "agent_stats": {
+    "mysgift-b-00000003": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -107.15
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T10:58:02.258174",
+      "last_battle": "2025-12-05T10:58:02.258185"
+    },
+    "mysgift-b-00000006": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -2.402322497375466
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T10:58:47.544836",
+      "last_battle": "2025-12-05T10:58:47.544861"
+    },
+    "mysgift-b-00000009": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.26
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T11:00:27.941177",
+      "last_battle": "2025-12-05T11:00:27.941185"
+    },
+    "mysgift-b-00000012": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -104.4
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T11:01:37.823311",
+      "last_battle": "2025-12-05T11:01:37.823328"
+    },
+    "mysgift-b-00000015": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.05
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T11:05:15.070095",
+      "last_battle": "2025-12-05T11:05:15.070213"
+    },
+    "mysgift-b-00000016": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.24
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T11:06:50.129324",
+      "last_battle": "2025-12-05T11:06:50.129348"
+    },
+    "mysgift-b-00000019": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        96.17585069792383
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T11:07:39.911297",
+      "last_battle": "2025-12-05T11:07:39.911305"
+    },
+    "mysgift-b-00000020": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.89999999999999
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T11:09:13.377860",
+      "last_battle": "2025-12-05T11:09:13.377876"
+    },
+    "mysgift-b-00000023": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.11000000000001
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:46:47.656946",
+      "last_battle": "2025-12-05T12:46:47.656964"
+    },
+    "mysgift-b-00000024": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.37
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:47:51.088746",
+      "last_battle": "2025-12-05T12:47:51.088770"
+    },
+    "mysgift-b-00000025": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -105.58000000000001
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:48:54.823653",
+      "last_battle": "2025-12-05T12:48:54.823675"
+    },
+    "mysgift-b-00000026": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.39
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:49:58.405434",
+      "last_battle": "2025-12-05T12:49:58.405451"
+    },
+    "mysgift-b-00000029": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -107.44
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:50:48.925700",
+      "last_battle": "2025-12-05T12:50:48.925726"
+    },
+    "mysgift-b-00000030": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -105.39
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:51:53.149637",
+      "last_battle": "2025-12-05T12:51:53.149655"
+    },
+    "mysgift-b-00000031": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -104.67
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:52:57.798450",
+      "last_battle": "2025-12-05T12:52:57.798475"
+    },
+    "mysgift-b-00000032": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.23
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:54:01.818030",
+      "last_battle": "2025-12-05T12:54:01.818044"
+    },
+    "mysgift-b-00000033": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        96.31133780004109
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:55:05.770091",
+      "last_battle": "2025-12-05T12:55:05.770116"
+    },
+    "mysgift-b-00000034": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.25
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:56:09.312188",
+      "last_battle": "2025-12-05T12:56:09.312210"
+    },
+    "mysgift-l-00000027": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.52
+      ],
+      "vs_humans": 1,
+      "vs_bots": 0,
+      "created_at": "2025-12-05T12:57:04.798055",
+      "last_battle": "2025-12-05T12:57:04.798074"
+    },
+    "mysgift-b-00000035": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        101.16154348623262
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:57:13.117955",
+      "last_battle": "2025-12-05T12:57:13.117982"
+    },
+    "mysgift-b-00000036": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.97000000000001
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:58:16.609400",
+      "last_battle": "2025-12-05T12:58:16.609416"
+    },
+    "mysgift-b-00000037": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.7
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T12:59:20.355553",
+      "last_battle": "2025-12-05T12:59:20.355590"
+    },
+    "mysgift-b-00000038": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.72
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:00:23.951220",
+      "last_battle": "2025-12-05T13:00:23.951247"
+    },
+    "mysgift-b-00000039": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.44
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:01:27.292853",
+      "last_battle": "2025-12-05T13:01:27.292879"
+    },
+    "mysgift-l-00000028": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        99.89967495219885
+      ],
+      "vs_humans": 1,
+      "vs_bots": 0,
+      "created_at": "2025-12-05T13:01:30.205234",
+      "last_battle": "2025-12-05T13:01:30.205278"
+    },
+    "mysgift-b-00000040": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -111.03
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:02:30.733241",
+      "last_battle": "2025-12-05T13:02:30.733259"
+    },
+    "mysgift-b-00000041": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.44
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:03:35.165674",
+      "last_battle": "2025-12-05T13:03:35.165856"
+    },
+    "mysgift-b-00000042": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.75
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:04:40.148568",
+      "last_battle": "2025-12-05T13:04:40.148927"
+    },
+    "mysgift-b-00000043": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.33
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:05:51.931868",
+      "last_battle": "2025-12-05T13:05:51.931932"
+    },
+    "mysgift-b-00000044": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.28999999999999
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:06:57.219314",
+      "last_battle": "2025-12-05T13:06:57.219383"
+    },
+    "mysgift-b-00000045": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -110.25
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:08:01.344178",
+      "last_battle": "2025-12-05T13:08:01.344242"
+    },
+    "mysgift-b-00000046": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.63000000000001
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:09:05.441385",
+      "last_battle": "2025-12-05T13:09:05.441416"
+    },
+    "mysgift-b-00000047": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.66
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:10:10.403429",
+      "last_battle": "2025-12-05T13:10:10.403458"
+    },
+    "mysgift-b-00000048": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.89
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:11:16.140478",
+      "last_battle": "2025-12-05T13:11:16.140522"
+    },
+    "mysgift-b-00000049": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        96.78
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:12:29.068969",
+      "last_battle": "2025-12-05T13:12:29.069166"
+    },
+    "mysgift-b-00000050": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -107.98
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:13:35.058029",
+      "last_battle": "2025-12-05T13:13:35.058055"
+    },
+    "mysgift-b-00000051": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.00999999999999
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:14:39.771362",
+      "last_battle": "2025-12-05T13:14:39.771850"
+    },
+    "mysgift-b-00000052": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -112.5
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:15:44.055338",
+      "last_battle": "2025-12-05T13:15:44.055372"
+    },
+    "mysgift-b-00000053": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -101.21
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:16:48.476694",
+      "last_battle": "2025-12-05T13:16:48.477927"
+    },
+    "mysgift-b-00000054": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.31
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:18:07.796903",
+      "last_battle": "2025-12-05T13:18:07.806544"
+    },
+    "mysgift-b-00000055": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -106.02
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:19:12.524282",
+      "last_battle": "2025-12-05T13:19:12.524314"
+    },
+    "mysgift-b-00000056": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        98.85398293029871
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:20:16.520416",
+      "last_battle": "2025-12-05T13:20:16.520650"
+    },
+    "mysgift-b-00000057": {
+      "battles": 1,
+      "wins": 1,
+      "losses": 0,
+      "rewards": [
+        99.3041648489895
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:21:20.466028",
+      "last_battle": "2025-12-05T13:21:20.466061"
+    },
+    "mysgift-b-00000058": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.38
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:22:38.850453",
+      "last_battle": "2025-12-05T13:22:38.850517"
+    },
+    "mysgift-b-00000059": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -107.59
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:24:16.137697",
+      "last_battle": "2025-12-05T13:24:16.144952"
+    },
+    "mysgift-b-00000060": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.2
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:27:12.059221",
+      "last_battle": "2025-12-05T13:27:12.059275"
+    },
+    "mysgift-b-00000061": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -104.42999999999999
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:28:25.187892",
+      "last_battle": "2025-12-05T13:28:25.187947"
+    },
+    "mysgift-b-00000062": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.22999999999999
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:29:50.106313",
+      "last_battle": "2025-12-05T13:29:50.106395"
+    },
+    "mysgift-b-00000063": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -109.71
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:30:58.243787",
+      "last_battle": "2025-12-05T13:30:58.243832"
+    },
+    "mysgift-b-00000064": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -111.68
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:32:11.753841",
+      "last_battle": "2025-12-05T13:32:11.753899"
+    },
+    "mysgift-b-00000065": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -111.21000000000001
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:33:22.309558",
+      "last_battle": "2025-12-05T13:33:22.309629"
+    },
+    "mysgift-b-00000066": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -108.9
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:34:27.950003",
+      "last_battle": "2025-12-05T13:34:27.950038"
+    },
+    "mysgift-b-00000067": {
+      "battles": 1,
+      "wins": 0,
+      "losses": 1,
+      "rewards": [
+        -105.7
+      ],
+      "vs_humans": 0,
+      "vs_bots": 1,
+      "created_at": "2025-12-05T13:35:33.353816",
+      "last_battle": "2025-12-05T13:35:33.353862"
+    }
+  }
+}

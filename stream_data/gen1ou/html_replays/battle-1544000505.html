@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>mysgift-b-00000062 vs Grunt - GEN1OU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Load Pokemon Showdown CSS for proper replay rendering -->
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/battle.css" />
+    <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/replay.css" />
+
+    <!-- Ensure proper base URL for Pokemon Showdown assets -->
+    <script>
+        // Set base URL for all Pokemon Showdown assets to avoid CORS issues
+        window.PS_SHOWDOWN_BASE = "https://play.pokemonshowdown.com/";
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+        }
+        /* Show the battle log by default */
+        .battle-log {
+            display: block !important;
+        }
+        /* Full screen layout for streaming */
+        .ps-room {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<!-- Container for Pokemon Showdown replay -->
+<div class="ps-room ps-room-opaque" data-battle>
+    <div class="battle">
+        <div class="battle-log" data-log></div>
+    </div>
+</div>
+
+<!-- Battle data -->
+<script type="text/plain" class="battle-log-data">|init|battle
+|title|mysgift-b-00000062 vs. Grunt-3416
+|j|☆mysgift-b-00000062
+|j|☆Grunt-3416
+|t:|1764959377
+|gametype|singles
+|player|p1|mysgift-b-00000062|2|
+|player|p2|Grunt-3416|1|
+|gen|1
+|tier|[Gen 1] OU
+|rule|Desync Clause Mod: Desyncs changed to move failure.
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Freeze Clause Mod: Limit one foe frozen
+|rule|Species Clause: Limit one of each Pokémon
+|rule|OHKO Clause: OHKO moves are banned
+|rule|Evasion Moves Clause: Evasion moves are banned
+|rule|Endless Battle Clause: Forcing endless battles is banned
+|rule|HP Percentage Mod: HP is shown in percentages
+
+|t:|1764959377
+|teamsize|p1|6
+|teamsize|p2|6
+|start
+|switch|p1a: Starmie|Starmie|323/323
+|switch|p2a: Starmie|Starmie|100/100
+|turn|1
+|request|{"active":[{"moves":[{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"323/323","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":2}
+
+|t:|1764959379
+|move|p1a: Starmie|Thunderbolt|p2a: Starmie
+|-supereffective|p2a: Starmie
+|-damage|p2a: Starmie|51/100
+|move|p2a: Starmie|Thunderbolt|p1a: Starmie
+|-supereffective|p1a: Starmie
+|-damage|p1a: Starmie|169/323
+
+|upkeep
+|turn|2
+|request|{"active":[{"moves":[{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":32,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"169/323","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":4}
+
+|t:|1764959380
+|move|p1a: Starmie|Recover|p1a: Starmie
+|-heal|p1a: Starmie|323/323
+|move|p2a: Starmie|Thunderbolt|p1a: Starmie
+|-crit|p1a: Starmie
+|-supereffective|p1a: Starmie
+|-damage|p1a: Starmie|18/323
+
+|upkeep
+|turn|3
+|request|{"active":[{"moves":[{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":31,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"18/323","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":6}
+
+|t:|1764959380
+|move|p1a: Starmie|Recover|p1a: Starmie
+|-heal|p1a: Starmie|179/323
+|move|p2a: Starmie|Thunderbolt|p1a: Starmie
+|-supereffective|p1a: Starmie
+|-damage|p1a: Starmie|20/323
+
+|upkeep
+|turn|4
+|request|{"active":[{"moves":[{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":30,"maxpp":32,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"523/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":8}
+
+|t:|1764959380
+|switch|p1a: Snorlax|Snorlax|523/523
+|move|p2a: Starmie|Thunderbolt|p1a: Snorlax
+|-damage|p1a: Snorlax|430/523
+
+|upkeep
+|turn|5
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Rest","id":"rest","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":10}
+
+|t:|1764959380
+|switch|p1a: Zapdos|Zapdos|383/383
+|move|p2a: Starmie|Blizzard|p1a: Zapdos|[miss]
+|-miss|p2a: Starmie
+
+|upkeep
+|turn|6
+|request|{"active":[{"moves":[{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Drill Peck","id":"drillpeck","pp":32,"maxpp":32,"target":"any","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Agility","id":"agility","pp":48,"maxpp":48,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":true,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":12}
+
+|t:|1764959380
+|move|p2a: Starmie|Blizzard|p1a: Zapdos|[miss]
+|-miss|p2a: Starmie
+|move|p1a: Zapdos|Thunderbolt|p2a: Starmie
+|-supereffective|p2a: Starmie
+|-damage|p2a: Starmie|0 fnt
+|faint|p2a: Starmie
+|request|{"wait":true,"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":true,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":14}
+
+|t:|1764959380
+|switch|p2a: Zapdos|Zapdos|100/100
+|turn|7
+|request|{"active":[{"moves":[{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Drill Peck","id":"drillpeck","pp":32,"maxpp":32,"target":"any","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Agility","id":"agility","pp":48,"maxpp":48,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":true,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"393/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":16}
+
+|t:|1764959381
+|switch|p1a: Exeggutor|Exeggutor|393/393
+|move|p2a: Zapdos|Thunderbolt|p1a: Exeggutor
+|-resisted|p1a: Exeggutor
+|-damage|p1a: Exeggutor|342/393
+
+|upkeep
+|turn|8
+|request|{"active":[{"moves":[{"move":"Sleep Powder","id":"sleeppowder","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Mega Drain","id":"megadrain","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Explosion","id":"explosion","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"342/393","active":true,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"703/703","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":18}
+
+|t:|1764959381
+|switch|p1a: Chansey|Chansey|703/703
+|move|p2a: Zapdos|Drill Peck|p1a: Chansey
+|-damage|p1a: Chansey|457/703
+
+|upkeep
+|turn|9
+|request|{"active":[{"moves":[{"move":"Ice Beam","id":"icebeam","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Thunderbolt","id":"thunderbolt","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Soft-Boiled","id":"softboiled","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"457/703","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"342/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":20}
+
+|t:|1764959381
+|move|p2a: Zapdos|Drill Peck|p1a: Chansey
+|-crit|p1a: Chansey
+|-damage|p1a: Chansey|0 fnt
+|faint|p1a: Chansey
+|request|{"forceSwitch":[true],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":true,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"342/393","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":22}
+
+|t:|1764959382
+|switch|p1a: Exeggutor|Exeggutor|342/393
+|turn|10
+|request|{"active":[{"moves":[{"move":"Sleep Powder","id":"sleeppowder","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Psychic","id":"psychic","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Mega Drain","id":"megadrain","pp":16,"maxpp":16,"target":"normal","disabled":false},{"move":"Explosion","id":"explosion","pp":8,"maxpp":8,"target":"normal","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"342/393","active":true,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":24}
+
+|t:|1764959382
+|move|p2a: Zapdos|Drill Peck|p1a: Exeggutor
+|-supereffective|p1a: Exeggutor
+|-damage|p1a: Exeggutor|140/393
+|move|p1a: Exeggutor|Explosion|p2a: Zapdos
+|-damage|p2a: Zapdos|22/100
+|faint|p1a: Exeggutor
+|request|{"forceSwitch":[true],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":true,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":26}
+
+|t:|1764959382
+|switch|p1a: Tauros|Tauros|353/353
+|turn|11
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"430/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":28}
+
+|t:|1764959382
+|switch|p1a: Snorlax|Snorlax|430/523
+|move|p2a: Zapdos|Thunderbolt|p1a: Snorlax
+|-damage|p1a: Snorlax|252/523
+
+|upkeep
+|turn|12
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Rest","id":"rest","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"252/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"20/323","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":30}
+
+|t:|1764959382
+|switch|p1a: Starmie|Starmie|20/323
+|move|p2a: Zapdos|Thunderbolt|p1a: Starmie
+|-supereffective|p1a: Starmie
+|-damage|p1a: Starmie|0 fnt
+|faint|p1a: Starmie
+|request|{"forceSwitch":[true],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":true,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"252/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":32}
+
+|t:|1764959382
+|switch|p1a: Tauros|Tauros|353/353
+|turn|13
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"252/523","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":34}
+
+|t:|1764959383
+|switch|p1a: Snorlax|Snorlax|252/523
+|move|p2a: Zapdos|Thunderbolt|p1a: Snorlax
+|-damage|p1a: Snorlax|90/523
+
+|upkeep
+|turn|14
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Reflect","id":"reflect","pp":32,"maxpp":32,"target":"self","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false},{"move":"Rest","id":"rest","pp":16,"maxpp":16,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"90/523","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":36}
+
+|t:|1764959384
+|move|p2a: Zapdos|Thunderbolt|p1a: Snorlax
+|-crit|p1a: Snorlax
+|-damage|p1a: Snorlax|0 fnt
+|faint|p1a: Snorlax
+|request|{"forceSwitch":[true],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":true,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":38}
+
+|t:|1764959384
+|switch|p1a: Zapdos|Zapdos|383/383
+|turn|15
+|request|{"active":[{"moves":[{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Drill Peck","id":"drillpeck","pp":32,"maxpp":32,"target":"any","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Agility","id":"agility","pp":48,"maxpp":48,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":true,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"353/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":40}
+
+|t:|1764959385
+|switch|p1a: Tauros|Tauros|353/353
+|move|p2a: Zapdos|Thunderbolt|p1a: Tauros
+|-damage|p1a: Tauros|182/353
+
+|upkeep
+|turn|16
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"182/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"383/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":42}
+
+|t:|1764959385
+|switch|p1a: Zapdos|Zapdos|383/383
+|move|p2a: Zapdos|Thunderbolt|p1a: Zapdos
+|-damage|p1a: Zapdos|263/383
+
+|upkeep
+|turn|17
+|request|{"active":[{"moves":[{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Drill Peck","id":"drillpeck","pp":32,"maxpp":32,"target":"any","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Agility","id":"agility","pp":48,"maxpp":48,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Zapdos","details":"Zapdos","condition":"263/383","active":true,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"182/353","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":44}
+
+|t:|1764959386
+|switch|p1a: Tauros|Tauros|182/353
+|move|p2a: Zapdos|Thunderbolt|p1a: Tauros
+|-damage|p1a: Tauros|23/353
+
+|upkeep
+|turn|18
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"23/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"263/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":46}
+
+|t:|1764959386
+|move|p1a: Tauros|Blizzard|p2a: Zapdos
+|-supereffective|p2a: Zapdos
+|-damage|p2a: Zapdos|0 fnt
+|faint|p2a: Zapdos
+|request|{"wait":true,"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"23/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"263/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":48}
+
+|t:|1764959387
+|switch|p2a: Exeggutor|Exeggutor|100/100
+|turn|19
+|request|{"active":[{"moves":[{"move":"Body Slam","id":"bodyslam","pp":24,"maxpp":24,"target":"normal","disabled":false},{"move":"Hyper Beam","id":"hyperbeam","pp":8,"maxpp":8,"target":"normal","disabled":false},{"move":"Blizzard","id":"blizzard","pp":7,"maxpp":8,"target":"normal","disabled":false},{"move":"Earthquake","id":"earthquake","pp":16,"maxpp":16,"target":"allAdjacent","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"23/353","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"263/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":50}
+
+|t:|1764959389
+|move|p1a: Tauros|Hyper Beam|p2a: Exeggutor
+|-damage|p2a: Exeggutor|50/100
+|-mustrecharge|p1a: Tauros
+|move|p2a: Exeggutor|Psychic|p1a: Tauros
+|-damage|p1a: Tauros|0 fnt
+|faint|p1a: Tauros
+|request|{"forceSwitch":[true],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":true,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Zapdos","details":"Zapdos","condition":"263/383","active":false,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"noCancel":true,"rqid":52}
+
+|t:|1764959389
+|switch|p1a: Zapdos|Zapdos|263/383
+|turn|20
+|request|{"active":[{"moves":[{"move":"Thunderbolt","id":"thunderbolt","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Drill Peck","id":"drillpeck","pp":32,"maxpp":32,"target":"any","disabled":false},{"move":"Thunder Wave","id":"thunderwave","pp":32,"maxpp":32,"target":"normal","disabled":false},{"move":"Agility","id":"agility","pp":48,"maxpp":48,"target":"self","disabled":false}]}],"side":{"name":"mysgift-b-00000062","id":"p1","pokemon":[{"ident":"p1: Zapdos","details":"Zapdos","condition":"263/383","active":true,"stats":{"atk":278,"def":268,"spa":348,"spd":348,"spe":298},"moves":["thunderbolt","drillpeck","thunderwave","agility"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Snorlax","details":"Snorlax","condition":"0 fnt","active":false,"stats":{"atk":318,"def":228,"spa":228,"spd":228,"spe":158},"moves":["bodyslam","reflect","earthquake","rest"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Starmie","details":"Starmie","condition":"0 fnt","active":false,"stats":{"atk":248,"def":268,"spa":298,"spd":298,"spe":328},"moves":["blizzard","thunderbolt","thunderwave","recover"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Chansey","details":"Chansey","condition":"0 fnt","active":false,"stats":{"atk":108,"def":108,"spa":308,"spd":308,"spe":198},"moves":["icebeam","thunderbolt","thunderwave","softboiled"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Tauros","details":"Tauros","condition":"0 fnt","active":false,"stats":{"atk":298,"def":288,"spa":238,"spd":238,"spe":318},"moves":["bodyslam","hyperbeam","blizzard","earthquake"],"baseAbility":"noability","item":"","pokeball":"pokeball"},{"ident":"p1: Exeggutor","details":"Exeggutor","condition":"0 fnt","active":false,"stats":{"atk":288,"def":268,"spa":348,"spd":348,"spe":208},"moves":["sleeppowder","psychic","megadrain","explosion"],"baseAbility":"noability","item":"","pokeball":"pokeball"}]},"rqid":54}
+
+|t:|1764959389
+|move|p1a: Zapdos|Thunderbolt|p2a: Exeggutor
+|-resisted|p2a: Exeggutor
+|-damage|p2a: Exeggutor|37/100
+|move|p2a: Exeggutor|Explosion|p1a: Zapdos
+|-crit|p1a: Zapdos
+|-damage|p1a: Zapdos|0 fnt
+|faint|p1a: Zapdos
+|faint|p2a: Exeggutor
+
+|win|Grunt-3416
+|deinit</script>
+
+<!-- Pokemon Showdown replay embed script -->
+<script src="https://play.pokemonshowdown.com/js/replay-embed.js"></script>
+</body>
+</html>

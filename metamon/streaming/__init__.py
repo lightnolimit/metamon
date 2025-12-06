@@ -13,6 +13,7 @@ from .opponent_matcher import OpponentMatcher, OpponentInfo
 from .training_tracker import TrainingMetrics
 from .mystery_gift_stream import start_mystery_gift_stream
 from .obs_widgets import OBSWidgetManager
+from .live_agent import LiveMysteryGiftAgent, LiveAgentManager
 
 __all__ = [
     'generate_replay_html',
@@ -30,4 +31,6 @@ __all__ = [
     'TrainingMetrics',
     'start_mystery_gift_stream',
     'OBSWidgetManager',
+    'LiveMysteryGiftAgent',
+    'LiveAgentManager',
 ]

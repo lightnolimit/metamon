@@ -29,13 +29,15 @@ def generate_replay_html(
     <title>{player_name} vs {opponent_name} - {battle_format.upper()}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <!-- Base URL so all assets load from Pokemon Showdown CDN -->
-    <!-- Removed to fix CORS issues when viewing local files -->
-    <!-- <base href="https://play.pokemonshowdown.com/" />
-    
     <!-- Load Pokemon Showdown CSS for proper replay rendering -->
     <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/battle.css" />
     <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/replay.css" />
+
+    <!-- Ensure proper base URL for Pokemon Showdown assets -->
+    <script>
+        // Set base URL for all Pokemon Showdown assets to avoid CORS issues
+        window.PS_SHOWDOWN_BASE = "https://play.pokemonshowdown.com/";
+    </script>
     
     <style>
         body {{

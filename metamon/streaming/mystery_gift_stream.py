@@ -7,13 +7,15 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from metamon.env import BattleAgainstBaseline, QueueOnLocalLadder, get_metamon_teams
+from metamon.env import BattleAgainstBaseline, get_metamon_teams
 from metamon.streaming.mystery_gift_agent import MysteryGiftAgent
 from metamon.streaming.opponent_matcher import OpponentMatcher, OpponentInfo
-from metamon.streaming.training_tracker import TrainingMetrics
+from metamon.streaming.training_tracker import TrainingMetrics, SharedTrainingMetrics
 from metamon.streaming.replay_viewer import ReplayViewer
 from metamon.streaming.obs_overlay import OBSOverlay
 from metamon.streaming.obs_widgets import OBSWidgetManager
+from metamon.streaming.agent_naming import get_naming_manager
+from metamon.streaming.live_agent import LiveAgentManager
 
 logger = logging.getLogger(__name__)
 
@@ -26,9 +28,9 @@ class MysteryGiftStreamOrchestrator:
         agent: MysteryGiftAgent,
         output_dir: str = "./stream_data",
         enable_ladder: bool = False,
-        human_wait_timeout: int = 60,
         start_viewer: bool = True,
         viewer_delay: int = 5,
+        max_live_agents: int = 2,
     ):
         """Initialize Mystery-Gift stream orchestrator.
         
@@ -49,17 +51,17 @@ class MysteryGiftStreamOrchestrator:
         self.replay_dir.mkdir(parents=True, exist_ok=True)
         self.stats_dir.mkdir(parents=True, exist_ok=True)
         
-        # Opponent matcher
-        self.opponent_matcher = OpponentMatcher(
-            agent=agent,
-            human_wait_timeout=human_wait_timeout
-        )
-        
+        # Opponent matcher (simplified for bot opponents only)
+        self.opponent_matcher = OpponentMatcher()
+
         # Training metrics
-        self.training_metrics = TrainingMetrics(
-            agent_name=agent.base_name,
-            output_file=str(self.stats_dir / "training_metrics.json"),
+        self.training_metrics = SharedTrainingMetrics(
+            agent_name=f"{agent.base_name}-MultiAgent",
+            output_file=str(self.stats_dir / "shared_metrics.json"),
         )
+
+        # Naming manager for unified agent naming
+        self.naming_manager = get_naming_manager()
         
         # Replay viewer
         self.viewer = None
@@ -77,14 +79,30 @@ class MysteryGiftStreamOrchestrator:
         # OBS widgets (separate text files for flexible positioning)
         self.obs_widgets = OBSWidgetManager(str(self.stats_dir))
 
-        self.enable_ladder = enable_ladder
+        # Live agent manager for human opponent matching
+        self.live_agent_manager = LiveAgentManager(
+            mystery_gift_agent=agent,
+            battle_format=agent.battle_format,
+            team_set=agent.team_set,
+            output_dir=str(self.output_dir),
+            training_metrics=self.training_metrics,
+            max_live_agents=max_live_agents,
+        )
+
+        # Multi-agent system state
         self.running = False
         self.battles_completed = 0
     
-    def _generate_agent_username(self, battle_num: int) -> str:
-        """Generate username for Mystery-Gift."""
-        # Use battle number as suffix for uniqueness (support up to 99999 battles)
-        return f"{self.agent.base_name}-{battle_num % 100000:05d}"
+    def _generate_agent_username(self, agent_type: str = 'b') -> str:
+        """Generate username for Mystery-Gift agent using unified naming system.
+
+        Args:
+            agent_type: Agent type ('b' for bot, 'l' for live)
+
+        Returns:
+            Username in format: mysgift-{type}-{counter:08d}
+        """
+        return self.naming_manager.get_next_username(agent_type)
     
     def run_battle(self, opponent: OpponentInfo, battle_number: int) -> bool:
         """Run a single battle.
@@ -96,7 +114,7 @@ class MysteryGiftStreamOrchestrator:
         Returns:
             True if Mystery-Gift won
         """
-        agent_username = self._generate_agent_username(battle_number)
+        agent_username = self._generate_agent_username('b')  # 'b' for bot battles
         opponent_display = self.opponent_matcher.get_opponent_display_name(opponent)
         
         logger.info(f"Battle {battle_number}: {agent_username} vs {opponent_display}")
@@ -154,16 +172,17 @@ class MysteryGiftStreamOrchestrator:
             f"vs {opponent_display}"
         )
         
-        # Update training metrics
-        self.training_metrics.update(
+        # Update shared training metrics with agent-specific battle data
+        self.training_metrics.update_agent_battle(
+            agent_id=agent_username,
             won=mystery_gift_won,
             opponent_type=opponent.opponent_type,
             opponent_name=opponent.name,
             reward=total_reward,
         )
 
-        # Save overlay
-        self.training_metrics.save_stream_overlay(
+        # Save overlay (using multi-agent overlay)
+        self.training_metrics.save_multi_agent_overlay(
             str(self.stats_dir / "mystery_gift_overlay.txt")
         )
 
@@ -174,8 +193,8 @@ class MysteryGiftStreamOrchestrator:
             "agent_name": agent_username
         })
 
-        # Update OBS widgets with current stats
-        self.obs_widgets.update_all_widgets(self.training_metrics.metrics)
+        # Update OBS widgets with current multi-agent stats
+        self.obs_widgets.update_all_widgets(self.training_metrics.shared_metrics)
 
         # Cleanup
         try:
@@ -285,21 +304,21 @@ class MysteryGiftStreamOrchestrator:
         time.sleep(3)
 
     def _wait_between_battles(self):
-        """Wait 90 seconds between battles with opponent search."""
-        logger.info("Waiting 90 seconds before next battle...")
+        """Wait 60 seconds between battles."""
+        logger.info("Waiting 60 seconds before next battle...")
 
         # Update OBS overlay and widgets with waiting status
         self.obs_overlay.update_stats({
             "current_battle_status": "Waiting for next battle...",
-            "agent_name": self.agent.base_name
+            "agent_name": f"{self.agent.base_name}-{self.naming_manager.get_current_counter()}"
         })
 
         self.obs_widgets.update_search_status("Waiting for next battle...")
         self.obs_widgets.update_current_opponent("", "bot")  # Clear current opponent
 
         # Split wait into 3-second intervals for responsive checking
-        total_wait = 90
-        for i in range(total_wait // 3):  # 30 intervals of 3 seconds
+        total_wait = 60
+        for i in range(total_wait // 3):  # 20 intervals of 3 seconds
             if not self.running:
                 break
 
@@ -319,28 +338,16 @@ class MysteryGiftStreamOrchestrator:
 
                 self.obs_overlay.update_stats({
                     "current_battle_status": countdown_display,
-                    "agent_name": self.agent.base_name
+                    "agent_name": f"{self.agent.base_name}-{self.naming_manager.get_current_counter()}"
                 })
 
-            # Search for human opponents during wait
-            if self.enable_ladder and i == 0:  # Start search at beginning
-                logger.info("Starting continuous human search...")
-                self.obs_widgets.update_search_status("Searching for human opponents...")
-                self.opponent_matcher.start_continuous_search(duration=90)
-            elif self.enable_ladder and i % 10 == 0:  # Update status periodically
-                if self.opponent_matcher.search_active:
-                    self.obs_widgets.update_search_status("Human search active...")
-                else:
-                    self.obs_widgets.update_search_status("Human search stopped")
+            # Update multi-agent status
+            self.obs_widgets.update_multi_agent_stats(self.training_metrics.shared_metrics)
 
             time.sleep(3)
 
         # Clear countdown when done
         self.obs_widgets.update_countdown(0)
-
-        # Stop continuous human search
-        if self.opponent_matcher.search_active:
-            self.opponent_matcher.stop_continuous_search()
 
         self.obs_widgets.update_search_status("Ready for battle!")
     
@@ -355,7 +362,7 @@ class MysteryGiftStreamOrchestrator:
         logger.info(f"\n{'='*60}")
         logger.info(f"Mystery-Gift Training Stream Starting")
         logger.info(f"Format: {self.agent.battle_format}")
-        logger.info(f"Ladder enabled: {self.enable_ladder}")
+        logger.info(f"Ladder enabled: True (multi-agent system)")
         logger.info(f"{'='*60}\n")
         
         # Start viewer
@@ -373,12 +380,18 @@ class MysteryGiftStreamOrchestrator:
         logger.info(f"  Width: 450, Height: Auto")
 
         # Initialize OBS widgets with current stats
-        self.obs_widgets.update_all_widgets(self.training_metrics.metrics)
+        self.obs_widgets.update_multi_agent_stats(self.training_metrics.shared_metrics)
         widget_paths = self.obs_widgets.get_widget_paths()
         logger.info(f"OBS widgets created in: {self.obs_widgets.widgets_dir}")
         logger.info("Add these as Text sources in OBS for flexible positioning:")
         for widget_name, widget_path in widget_paths.items():
             logger.info(f"  {widget_name}: file://{widget_path}")
+
+        # Start live agents for human opponent matching
+        logger.info("Starting live agents for human opponent matching...")
+        self.live_agent_manager.start_live_agents()
+        live_status = self.live_agent_manager.get_live_agent_status()
+        logger.info(f"Live agents started: {live_status['total_agents']} agents active")
 
         battle_num = 0
         
@@ -389,10 +402,8 @@ class MysteryGiftStreamOrchestrator:
             
             battle_num += 1
             
-            # Find opponent
-            opponent = self.opponent_matcher.find_opponent(
-                enable_ladder=self.enable_ladder
-            )
+            # Find opponent (bot opponents only in multi-agent system)
+            opponent = self.opponent_matcher.find_opponent()
             
             # Run battle
             self.run_battle(opponent, battle_num)
@@ -405,20 +416,25 @@ class MysteryGiftStreamOrchestrator:
         logger.info("Stopping Mystery-Gift stream...")
         self.running = False
 
-        # Stop continuous human search
-        if self.opponent_matcher.search_active:
-            self.opponent_matcher.stop_continuous_search()
+        # Stop live agents
+        if hasattr(self, 'live_agent_manager'):
+            logger.info("Stopping live agents...")
+            self.live_agent_manager.stop_live_agents()
 
+        # Stop viewer with proper thread handling
         if self.viewer:
-            self.viewer.stop()
+            try:
+                logger.info("Stopping replay viewer...")
+                self.viewer.stop()
+            except Exception as e:
+                logger.warning(f"Error stopping viewer: {e}")
+                # Continue despite viewer stopping issues
 
 
 def start_mystery_gift_stream(
     battle_format: str = "gen1ou",
     output_dir: str = "./stream_data",
     team_set: str = "competitive",
-    enable_ladder: bool = False,
-    human_wait_timeout: int = 60,
     use_pretrained: bool = False,
     pretrained_model: Optional[str] = None,
     max_battles: Optional[int] = None,
@@ -460,10 +476,10 @@ def start_mystery_gift_stream(
     orchestrator = MysteryGiftStreamOrchestrator(
         agent=agent,
         output_dir=output_dir,
-        enable_ladder=enable_ladder,
-        human_wait_timeout=human_wait_timeout,
+        enable_ladder=False,  # Not used in multi-agent system
         start_viewer=True,
         viewer_delay=5,
+        max_live_agents=2,  # Number of live agents for human matching
     )
     
     try:

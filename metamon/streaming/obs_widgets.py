@@ -28,6 +28,15 @@ class OBSWidgetManager:
 
         # Define all widget files
         self.widget_files = {
+            # Multi-agent system widgets
+            "total_agents": self.widgets_dir / "total_agents.txt",
+            "active_agents": self.widgets_dir / "active_agents.txt",
+            "system_win_rate": self.widgets_dir / "system_win_rate.txt",
+            "combined_battles": self.widgets_dir / "combined_battles.txt",
+            "combined_record": self.widgets_dir / "combined_record.txt",
+            "agent_breakdown": self.widgets_dir / "agent_breakdown.txt",
+
+            # Original widgets (updated for multi-agent)
             "win_rate": self.widgets_dir / "win_rate.txt",
             "battles": self.widgets_dir / "battles.txt",
             "record": self.widgets_dir / "record.txt",
@@ -47,6 +56,15 @@ class OBSWidgetManager:
     def _initialize_widgets(self):
         """Initialize all widget files with default values."""
         defaults = {
+            # Multi-agent system widgets
+            "total_agents": "0",
+            "active_agents": "0",
+            "system_win_rate": "0.0%",
+            "combined_battles": "0",
+            "combined_record": "0W - 0L",
+            "agent_breakdown": "No active agents",
+
+            # Original widgets (updated for multi-agent)
             "win_rate": "0.0%",
             "battles": "0",
             "record": "0W - 0L",
@@ -191,3 +209,67 @@ class OBSWidgetManager:
             List of widget file paths
         """
         return [str(path) for path in self.widget_files.values()]
+
+    def update_multi_agent_stats(self, shared_metrics: Dict[str, Any]):
+        """Update multi-agent system widgets from shared training metrics.
+
+        Args:
+            shared_metrics: Dictionary containing shared training metrics from SharedTrainingMetrics
+        """
+        try:
+            # Extract system-wide stats from shared metrics
+            total_battles = shared_metrics.get("total_battles", 0)
+            total_wins = shared_metrics.get("total_wins", 0)
+            total_losses = shared_metrics.get("total_losses", 0)
+            agent_count = shared_metrics.get("agent_count", 0)
+
+            # Extract per-agent stats
+            agent_stats = shared_metrics.get("agents", {})
+
+            # Calculate system win rate
+            system_win_rate = (total_wins / total_battles * 100) if total_battles > 0 else 0.0
+
+            # Update multi-agent system widgets
+            self._write_widget("total_agents", str(agent_count))
+            self._write_widget("active_agents", str(len([a for a in agent_stats.values() if a.get("active", False)])))
+            self._write_widget("system_win_rate", f"{system_win_rate:.1f}%")
+            self._write_widget("combined_battles", str(total_battles))
+            self._write_widget("combined_record", f"{total_wins}W - {total_losses}L")
+
+            # Create agent breakdown
+            if agent_stats:
+                breakdown_lines = []
+                for agent_id, stats in agent_stats.items():
+                    battles = stats.get("battles", 0)
+                    wins = stats.get("wins", 0)
+                    agent_wr = (wins / battles * 100) if battles > 0 else 0.0
+                    breakdown_lines.append(f"{agent_id}: {battles}B ({agent_wr:.1f}% WR)")
+
+                agent_breakdown = "\n".join(breakdown_lines[:5])  # Show top 5 agents
+                if len(breakdown_lines) > 5:
+                    agent_breakdown += f"\n... and {len(breakdown_lines) - 5} more"
+            else:
+                agent_breakdown = "No agent data available"
+
+            self._write_widget("agent_breakdown", agent_breakdown)
+
+            # Also update original widgets with combined stats
+            combined_stats = {
+                "total_battles": total_battles,
+                "wins": total_wins,
+                "losses": total_losses,
+                "current_streak": shared_metrics.get("current_streak", 0),
+                "best_streak": shared_metrics.get("best_streak", 0),
+                "vs_humans_battles": shared_metrics.get("vs_humans_battles", 0),
+                "vs_humans_wins": shared_metrics.get("vs_humans_wins", 0),
+                "vs_bots_battles": shared_metrics.get("vs_bots_battles", 0),
+                "vs_bots_wins": shared_metrics.get("vs_bots_wins", 0),
+                "recent_performance": shared_metrics.get("recent_performance", "No recent battles"),
+            }
+
+            self.update_all_widgets(combined_stats)
+
+            logger.debug(f"Updated multi-agent widgets: {agent_count} agents, {total_battles} total battles")
+
+        except Exception as e:
+            logger.error(f"Failed to update multi-agent widgets: {e}")

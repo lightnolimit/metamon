@@ -135,7 +135,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo "Configuration:"
-echo "  Ladder enabled: $ENABLE_LADDER"
+echo "  Ladder enabled: True (multi-agent system)"
 if [[ -n "$MAX_BATTLES" ]]; then
     echo "  Max battles: $MAX_BATTLES"
 fi
@@ -149,21 +149,24 @@ from metamon.streaming import start_mystery_gift_stream
 config = mystery_gift_config.get_mystery_gift_config()
 
 # Override config with command line arguments if provided
-if '$ENABLE_LADDER' == 'true':
-    config['enable_ladder'] = True
+max_battles = '$MAX_BATTLES'
 
-if '$MAX_BATTLES' != '':
+if max_battles:
     try:
-        config['max_battles'] = int('$MAX_BATTLES')
+        config['max_battles'] = int(max_battles)
     except ValueError:
         pass
+
+print(f"Configuration:")
+print(f"  Ladder enabled: True (multi-agent system)")
+if max_battles:
+    print(f"  Max battles: {config['max_battles']}")
+print("")
 
 start_mystery_gift_stream(
     battle_format=config['battle_format'],
     output_dir=config['output_dir'],
     team_set=config['team_set'],
-    enable_ladder=config['enable_ladder'],
-    human_wait_timeout=config['human_wait_timeout'],
     use_pretrained=config['use_pretrained'],
     pretrained_model=config['pretrained_model'],
     max_battles=config['max_battles'],

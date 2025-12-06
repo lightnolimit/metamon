@@ -21,7 +21,9 @@
       "Bash(grep:*)",
       "Bash(find:*)",
       "Bash(./RUN_MYSTERY_GIFT.sh:*)",
-      "Bash(bash -c 'ENABLE_LADDER=true MAX_BATTLES=5 ./RUN_MYSTERY_GIFT.sh 2>&1 | head -30')"
+      "Bash(bash -c 'ENABLE_LADDER=true MAX_BATTLES=5 ./RUN_MYSTERY_GIFT.sh 2>&1 | head -30')",
+      "Bash(MAX_BATTLES=5)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []
